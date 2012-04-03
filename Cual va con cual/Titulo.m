@@ -9,7 +9,6 @@
 #import "Titulo.h"
 
 @interface Titulo()
-- (CCLabelTTF *)crearLabelConTexto:(NSString *)texto yTamano:(int)tamano;
 - (void)crearMenu;
 @end
 
@@ -35,12 +34,11 @@
     if (self) {
         size = [[CCDirector sharedDirector] winSize];
         
-        CCLabelTTF *titulo = [self crearLabelConTexto:@"¿Cuál va con cuál?" yTamano:40];
+        CCLabelTTF *titulo = [CreacionElementos crearLabelConTexto:@"¿Cuál va con cuál?" tamano:40];
         titulo.position = ccp(size.width/2, size.height - titulo.contentSize.height);
+        [self addChild:titulo z:1];
         
         [self crearMenu];
-        
-        [self addChild:titulo z:1];
     }
     
     return self;
@@ -48,19 +46,25 @@
 
 #pragma mark - Acciones
 
-- (void)empezar
+- (void)empezar:(id)sender
 {
     NSLog(@"empezar");
 }
 
-- (void)dificultad
+- (void)dificultad:(id)sender
 {
     NSLog(@"dificultad");
+    
+    CCScene *scene = [Dificultad scene];
+    [[CCDirector sharedDirector] replaceScene:scene];
 }
 
-- (void)instrucciones
+- (void)instrucciones:(id)sender
 {
     NSLog(@"instrucciones");
+    
+    CCScene *scene = [Instrucciones scene];
+    [[CCDirector sharedDirector] replaceScene:scene];
 }
 
 #pragma mark - Creación de elementos
@@ -69,24 +73,17 @@
 {
     int tamanoLetra = 32;
     
-    CCMenuItemLabel *empezarButton = [CCMenuItemLabel itemWithLabel:[self crearLabelConTexto:@"Empezar" yTamano:tamanoLetra] target:self selector:@selector(empezar)];
+    CCMenuItemLabel *empezarButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Empezar" tamano:tamanoLetra] target:self selector:@selector(empezar:)];
     
-    CCMenuItemLabel *dificultadButton = [CCMenuItemLabel itemWithLabel:[self crearLabelConTexto:@"Dificultad" yTamano:tamanoLetra] target:self selector:@selector(dificultad)];
+    CCMenuItemLabel *dificultadButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Dificultad" tamano:tamanoLetra] target:self selector:@selector(dificultad:)];
     
-    CCMenuItemLabel *instruccionesButton = [CCMenuItemLabel itemWithLabel:[self crearLabelConTexto:@"Instrucciones" yTamano:tamanoLetra] target:self selector:@selector(instrucciones)];
+    CCMenuItemLabel *instruccionesButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Instrucciones" tamano:tamanoLetra] target:self selector:@selector(instrucciones:)];
     
     CCMenu *menu = [CCMenu menuWithItems:empezarButton, dificultadButton, instruccionesButton, nil];
     [menu alignItemsVerticallyWithPadding:10];
     menu.position = ccp(size.width/2, size.height/2);
     
     [self addChild:menu z:1];
-}
-
-- (CCLabelTTF *)crearLabelConTexto:(NSString *)texto yTamano:(int)tamano
-{
-    CCLabelTTF *label = [CCLabelTTF labelWithString:texto fontName:@"Marker Felt" fontSize:tamano];
-    
-    return label;
 }
 
 @end

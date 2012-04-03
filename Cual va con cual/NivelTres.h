@@ -1,5 +1,5 @@
 //
-//  Titulo.h
+//  NivelTres.h
 //  Cual va con cual
 //
 //  Created by Gilberto Leon on 02/04/12.
@@ -8,15 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "CreacionElementos.h"
-#import "Dificultad.h"
-#import "Instrucciones.h"
 
-@interface Titulo : CCLayer 
-{
-    CGSize size;
+@interface NivelTres : CCLayer {
+    
 }
-
-+ (CCScene *)scene;
 
 @end

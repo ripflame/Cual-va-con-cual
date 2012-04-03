@@ -1,5 +1,5 @@
 //
-//  Titulo.h
+//  Dificultad.h
 //  Cual va con cual
 //
 //  Created by Gilberto Leon on 02/04/12.
@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Titulo.h"
 #import "CreacionElementos.h"
-#import "Dificultad.h"
-#import "Instrucciones.h"
 
-@interface Titulo : CCLayer 
+@interface Dificultad : CCLayer 
 {
     CGSize size;
 }
