@@ -46,14 +46,6 @@
 
 #pragma mark - Acciones
 
-- (void)empezar:(id)sender
-{
-    NSLog(@"empezar");
-    
-    CCScene *scene = [NivelUno scene];
-    [[CCDirector sharedDirector] replaceScene:scene];
-}
-
 - (void)dificultad:(id)sender
 {
     NSLog(@"dificultad");
@@ -76,13 +68,11 @@
 {
     int tamanoLetra = 32;
     
-    CCMenuItemLabel *empezarButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Empezar" tamano:tamanoLetra] target:self selector:@selector(empezar:)];
-    
     CCMenuItemLabel *dificultadButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Dificultad" tamano:tamanoLetra] target:self selector:@selector(dificultad:)];
     
     CCMenuItemLabel *instruccionesButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Instrucciones" tamano:tamanoLetra] target:self selector:@selector(instrucciones:)];
     
-    CCMenu *menu = [CCMenu menuWithItems:empezarButton, dificultadButton, instruccionesButton, nil];
+    CCMenu *menu = [CCMenu menuWithItems:dificultadButton, instruccionesButton, nil];
     [menu alignItemsVerticallyWithPadding:10];
     menu.position = ccp(size.width/2, size.height/2);
     

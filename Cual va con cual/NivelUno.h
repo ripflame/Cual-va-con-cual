@@ -12,19 +12,7 @@
 #import "CreacionElementos.h"
 #import "Titulo.h"
 
-@interface NivelUno : CCLayer 
-{
-    CGSize size;
-    NSArray *cartas;
-    CCMenu *menuUno;
-    CCMenu *menuDos;
-    int cartaUno;
-    int cartaDos;
-    
-    int cartasVisibles;
-    CCMenuItemImage *cartaAnterior;
-    CCMenuItemImage *cartaAnteAnterior;
-}
+@interface NivelUno : CCLayer
 
 + (CCScene *)scene;
 
