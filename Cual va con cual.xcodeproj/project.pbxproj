@@ -135,12 +135,12 @@
 		3DC5DD8F152A6D8B0093B884 /* Titulo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5DD8E152A6D8B0093B884 /* Titulo.m */; };
 		3DC5DD92152A7B050093B884 /* Dificultad.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5DD91152A7B050093B884 /* Dificultad.m */; };
 		3DC5DD95152A7BCD0093B884 /* CreacionElementos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5DD94152A7BCD0093B884 /* CreacionElementos.m */; };
-		3DDA4AF1153650670097F9C9 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA4AF0153650670097F9C9 /* Card.m */; };
 		3DF305A3152CD1D700F3B92B /* NSArray+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF305A2152CD1D700F3B92B /* NSArray+Helpers.m */; };
 		3DF3A2CD152A8D94004A7A6C /* Instrucciones.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2CC152A8D94004A7A6C /* Instrucciones.m */; };
 		3DF3A2D1152A9053004A7A6C /* NivelUno.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2D0152A9053004A7A6C /* NivelUno.m */; };
 		3DF3A2E0152A918B004A7A6C /* NivelDos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2DF152A918B004A7A6C /* NivelDos.m */; };
 		3DF3A2E3152A9195004A7A6C /* NivelTres.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2E2152A9195004A7A6C /* NivelTres.m */; };
+		4BC2D48E15366F0700CD1B15 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2D48D15366F0700CD1B15 /* Card.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,8 +394,6 @@
 		3DC5DD91152A7B050093B884 /* Dificultad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dificultad.m; sourceTree = "<group>"; };
 		3DC5DD93152A7BCD0093B884 /* CreacionElementos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreacionElementos.h; sourceTree = "<group>"; };
 		3DC5DD94152A7BCD0093B884 /* CreacionElementos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreacionElementos.m; sourceTree = "<group>"; };
-		3DDA4AEF153650670097F9C9 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		3DDA4AF0153650670097F9C9 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		3DF305A1152CD1D700F3B92B /* NSArray+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Helpers.h"; sourceTree = "<group>"; };
 		3DF305A2152CD1D700F3B92B /* NSArray+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Helpers.m"; sourceTree = "<group>"; };
 		3DF3A2CB152A8D94004A7A6C /* Instrucciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instrucciones.h; sourceTree = "<group>"; };
@@ -406,6 +404,8 @@
 		3DF3A2DF152A918B004A7A6C /* NivelDos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NivelDos.m; sourceTree = "<group>"; };
 		3DF3A2E1152A9195004A7A6C /* NivelTres.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NivelTres.h; sourceTree = "<group>"; };
 		3DF3A2E2152A9195004A7A6C /* NivelTres.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NivelTres.m; sourceTree = "<group>"; };
+		4BC2D48C15366F0700CD1B15 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Models/Card.h; sourceTree = "<group>"; };
+		4BC2D48D15366F0700CD1B15 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Models/Card.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +480,7 @@
 		3DC5DC2C152A6C7D0093B884 /* Cual va con cual */ = {
 			isa = PBXGroup;
 			children = (
+				4BC2D48B15366EEB00CD1B15 /* Models */,
 				3DF3059F152CD1B000F3B92B /* Categories */,
 				3DF3A2DC152A913C004A7A6C /* Titulos */,
 				3DF3A2DD152A9169004A7A6C /* Apoyo */,
@@ -865,10 +866,17 @@
 			children = (
 				3DC5DD93152A7BCD0093B884 /* CreacionElementos.h */,
 				3DC5DD94152A7BCD0093B884 /* CreacionElementos.m */,
-				3DDA4AEF153650670097F9C9 /* Card.h */,
-				3DDA4AF0153650670097F9C9 /* Card.m */,
 			);
 			name = Apoyo;
+			sourceTree = "<group>";
+		};
+		4BC2D48B15366EEB00CD1B15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4BC2D48C15366F0700CD1B15 /* Card.h */,
+				4BC2D48D15366F0700CD1B15 /* Card.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1056,7 +1064,7 @@
 				3DF3A2E0152A918B004A7A6C /* NivelDos.m in Sources */,
 				3DF3A2E3152A9195004A7A6C /* NivelTres.m in Sources */,
 				3DF305A3152CD1D700F3B92B /* NSArray+Helpers.m in Sources */,
-				3DDA4AF1153650670097F9C9 /* Card.m in Sources */,
+				4BC2D48E15366F0700CD1B15 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
