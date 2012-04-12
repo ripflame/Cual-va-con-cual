@@ -394,7 +394,7 @@
 		3DC5DD91152A7B050093B884 /* Dificultad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dificultad.m; sourceTree = "<group>"; };
 		3DC5DD93152A7BCD0093B884 /* CreacionElementos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreacionElementos.h; sourceTree = "<group>"; };
 		3DC5DD94152A7BCD0093B884 /* CreacionElementos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreacionElementos.m; sourceTree = "<group>"; };
-		3DDA4AEF153650670097F9C9 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Card.h; sourceTree = "<group>"; };
+		3DDA4AEF153650670097F9C9 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		3DDA4AF0153650670097F9C9 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		3DF305A1152CD1D700F3B92B /* NSArray+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Helpers.h"; sourceTree = "<group>"; };
 		3DF305A2152CD1D700F3B92B /* NSArray+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Helpers.m"; sourceTree = "<group>"; };
@@ -897,7 +897,7 @@
 		3DC5DC0F152A6C7C0093B884 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 3DC5DC12152A6C7C0093B884 /* Build configuration list for PBXProject "Cual va con cual" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1108,6 +1108,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cual va con cual/Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Cual va con cual/Resources/Info.plist";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1123,6 +1124,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cual va con cual/Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Cual va con cual/Resources/Info.plist";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
