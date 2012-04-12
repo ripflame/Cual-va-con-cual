@@ -92,6 +92,7 @@
     NSLog(@"seleccionado %d", sender.tag);
     
     Card *currentCard = [cartas objectAtIndex:sender.tag];
+    Card *previousCard = [cartas objectAtIndex:cartaAnterior.tag];
     
     if (cartasVisibles == 2) {
         cartaAnterior.normalImage = [CCSprite spriteWithFile:@"fondo.png"];
@@ -105,23 +106,13 @@
         cartaAnterior = sender;
         cartasVisibles = 1;
     } else if (cartasVisibles == 1) {
-        if (1 == 2) { // SERIOUSLY ?!
-            sender.normalImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
-            sender.selectedImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
+        if ([currentCard isEqualValue:previousCard]) {
+            sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
+            sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
             [sender setIsEnabled:NO];
             [cartaAnterior setIsEnabled:NO];
             cartasVisibles = 0;
         } else {
-            NSLog(@"Comparando ando");
-            // Aqui es donde comparo ¿No?
-            Card *previousCard = [cartas objectAtIndex:cartaAnterior.tag];
-            
-            if ([currentCard isEqualValue:previousCard]) {
-                NSLog(@"Le atinaste");
-            }else{
-                NSLog(@"Try again");
-            }
-            
             sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
             sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
             cartaAnteAnterior = cartaAnterior;

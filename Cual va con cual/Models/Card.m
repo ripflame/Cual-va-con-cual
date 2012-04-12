@@ -12,16 +12,6 @@
 @synthesize value = _value;
 @synthesize name = _name;
 
-- (id)init
-{
-    return [self initWithName:nil];
-}
-
-- (id)initWithName:(NSString *)name
-{
-    return [self initWithName:name value:nil];
-}
-
 - (id)initWithName:(NSString *)name value:(NSNumber *)value
 {
     self = [super init];
@@ -31,6 +21,16 @@
         _value = [value copy];
     }
     return self;
+}
+
+- (id)initWithName:(NSString *)name
+{
+    return [self initWithName:name value:nil];
+}
+
+- (id)init
+{
+    return [self initWithName:nil];
 }
 
 + (Card *)cardWithName:(NSString *)name
