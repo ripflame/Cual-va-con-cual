@@ -10,6 +10,9 @@
 #import "cocos2d.h"
 #import "Titulo.h"
 #import "CreacionElementos.h"
+#import "NivelUno.h"
+#import "NivelDos.h"
+#import "NivelTres.h"
 
 @interface Dificultad : CCLayer 
 {

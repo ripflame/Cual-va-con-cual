@@ -49,6 +49,9 @@
 - (void)empezar:(id)sender
 {
     NSLog(@"empezar");
+    
+    CCScene *scene = [NivelUno scene];
+    [[CCDirector sharedDirector] replaceScene:scene];
 }
 
 - (void)dificultad:(id)sender

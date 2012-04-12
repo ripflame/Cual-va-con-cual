@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CreacionElementos.h"
+#import "Titulo.h"
 
-@interface NivelDos : CCLayer {
-    
+@interface NivelDos : CCLayer
+{
+    CGSize size;
 }
+
++ (CCScene *)scene;
 
 @end

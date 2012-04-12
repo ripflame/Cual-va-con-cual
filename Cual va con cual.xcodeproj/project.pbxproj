@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DC495F9152B9CF600101CA0 /* carta1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495EE152B9CF600101CA0 /* carta1.png */; };
+		3DC495FA152B9CF600101CA0 /* carta1a.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495EF152B9CF600101CA0 /* carta1a.png */; };
+		3DC495FB152B9CF600101CA0 /* carta2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495F0152B9CF600101CA0 /* carta2.png */; };
+		3DC495FC152B9CF600101CA0 /* carta2a.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495F1152B9CF600101CA0 /* carta2a.png */; };
+		3DC495FD152B9CF600101CA0 /* carta3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495F2152B9CF600101CA0 /* carta3.png */; };
+		3DC495FE152B9CF600101CA0 /* carta3a.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495F3152B9CF600101CA0 /* carta3a.png */; };
+		3DC495FF152B9CF600101CA0 /* carta4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495F4152B9CF600101CA0 /* carta4.png */; };
+		3DC49600152B9CF600101CA0 /* carta4a.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495F5152B9CF600101CA0 /* carta4a.png */; };
+		3DC49601152B9CF600101CA0 /* carta5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495F6152B9CF600101CA0 /* carta5.png */; };
+		3DC49602152B9CF600101CA0 /* carta5a.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495F7152B9CF600101CA0 /* carta5a.png */; };
+		3DC49603152B9CF600101CA0 /* fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495F8152B9CF600101CA0 /* fondo.png */; };
 		3DC5DC1D152A6C7D0093B884 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC5DC1C152A6C7D0093B884 /* QuartzCore.framework */; };
 		3DC5DC1F152A6C7D0093B884 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC5DC1E152A6C7D0093B884 /* OpenGLES.framework */; };
 		3DC5DC21152A6C7D0093B884 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC5DC20152A6C7D0093B884 /* OpenAL.framework */; };
@@ -124,14 +135,26 @@
 		3DC5DD8F152A6D8B0093B884 /* Titulo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5DD8E152A6D8B0093B884 /* Titulo.m */; };
 		3DC5DD92152A7B050093B884 /* Dificultad.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5DD91152A7B050093B884 /* Dificultad.m */; };
 		3DC5DD95152A7BCD0093B884 /* CreacionElementos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5DD94152A7BCD0093B884 /* CreacionElementos.m */; };
+		3DDA4AF1153650670097F9C9 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA4AF0153650670097F9C9 /* Card.m */; };
+		3DF305A3152CD1D700F3B92B /* NSArray+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF305A2152CD1D700F3B92B /* NSArray+Helpers.m */; };
 		3DF3A2CD152A8D94004A7A6C /* Instrucciones.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2CC152A8D94004A7A6C /* Instrucciones.m */; };
 		3DF3A2D1152A9053004A7A6C /* NivelUno.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2D0152A9053004A7A6C /* NivelUno.m */; };
 		3DF3A2E0152A918B004A7A6C /* NivelDos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2DF152A918B004A7A6C /* NivelDos.m */; };
 		3DF3A2E3152A9195004A7A6C /* NivelTres.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2E2152A9195004A7A6C /* NivelTres.m */; };
-		3DF3A2E5152A97B6004A7A6C /* carta2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF3A2E4152A97B6004A7A6C /* carta2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DC495EE152B9CF600101CA0 /* carta1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta1.png; sourceTree = "<group>"; };
+		3DC495EF152B9CF600101CA0 /* carta1a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta1a.png; sourceTree = "<group>"; };
+		3DC495F0152B9CF600101CA0 /* carta2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta2.png; sourceTree = "<group>"; };
+		3DC495F1152B9CF600101CA0 /* carta2a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta2a.png; sourceTree = "<group>"; };
+		3DC495F2152B9CF600101CA0 /* carta3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta3.png; sourceTree = "<group>"; };
+		3DC495F3152B9CF600101CA0 /* carta3a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta3a.png; sourceTree = "<group>"; };
+		3DC495F4152B9CF600101CA0 /* carta4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta4.png; sourceTree = "<group>"; };
+		3DC495F5152B9CF600101CA0 /* carta4a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta4a.png; sourceTree = "<group>"; };
+		3DC495F6152B9CF600101CA0 /* carta5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta5.png; sourceTree = "<group>"; };
+		3DC495F7152B9CF600101CA0 /* carta5a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta5a.png; sourceTree = "<group>"; };
+		3DC495F8152B9CF600101CA0 /* fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo.png; sourceTree = "<group>"; };
 		3DC5DC18152A6C7D0093B884 /* Cual va con cual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cual va con cual.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC5DC1C152A6C7D0093B884 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3DC5DC1E152A6C7D0093B884 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -371,6 +394,10 @@
 		3DC5DD91152A7B050093B884 /* Dificultad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dificultad.m; sourceTree = "<group>"; };
 		3DC5DD93152A7BCD0093B884 /* CreacionElementos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreacionElementos.h; sourceTree = "<group>"; };
 		3DC5DD94152A7BCD0093B884 /* CreacionElementos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreacionElementos.m; sourceTree = "<group>"; };
+		3DDA4AEF153650670097F9C9 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Card.h; sourceTree = "<group>"; };
+		3DDA4AF0153650670097F9C9 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		3DF305A1152CD1D700F3B92B /* NSArray+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Helpers.h"; sourceTree = "<group>"; };
+		3DF305A2152CD1D700F3B92B /* NSArray+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Helpers.m"; sourceTree = "<group>"; };
 		3DF3A2CB152A8D94004A7A6C /* Instrucciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instrucciones.h; sourceTree = "<group>"; };
 		3DF3A2CC152A8D94004A7A6C /* Instrucciones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instrucciones.m; sourceTree = "<group>"; };
 		3DF3A2CF152A9053004A7A6C /* NivelUno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NivelUno.h; sourceTree = "<group>"; };
@@ -379,7 +406,6 @@
 		3DF3A2DF152A918B004A7A6C /* NivelDos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NivelDos.m; sourceTree = "<group>"; };
 		3DF3A2E1152A9195004A7A6C /* NivelTres.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NivelTres.h; sourceTree = "<group>"; };
 		3DF3A2E2152A9195004A7A6C /* NivelTres.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NivelTres.m; sourceTree = "<group>"; };
-		3DF3A2E4152A97B6004A7A6C /* carta2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +427,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DC495EC152B9CDA00101CA0 /* Cartas */ = {
+			isa = PBXGroup;
+			children = (
+				3DC495EE152B9CF600101CA0 /* carta1.png */,
+				3DC495EF152B9CF600101CA0 /* carta1a.png */,
+				3DC495F0152B9CF600101CA0 /* carta2.png */,
+				3DC495F1152B9CF600101CA0 /* carta2a.png */,
+				3DC495F2152B9CF600101CA0 /* carta3.png */,
+				3DC495F3152B9CF600101CA0 /* carta3a.png */,
+				3DC495F4152B9CF600101CA0 /* carta4.png */,
+				3DC495F5152B9CF600101CA0 /* carta4a.png */,
+				3DC495F6152B9CF600101CA0 /* carta5.png */,
+				3DC495F7152B9CF600101CA0 /* carta5a.png */,
+				3DC495F8152B9CF600101CA0 /* fondo.png */,
+			);
+			name = Cartas;
+			sourceTree = "<group>";
+		};
 		3DC5DC0D152A6C7C0093B884 = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +480,7 @@
 		3DC5DC2C152A6C7D0093B884 /* Cual va con cual */ = {
 			isa = PBXGroup;
 			children = (
+				3DF3059F152CD1B000F3B92B /* Categories */,
 				3DF3A2DC152A913C004A7A6C /* Titulos */,
 				3DF3A2DD152A9169004A7A6C /* Apoyo */,
 				3DC5DD7E152A6C870093B884 /* AppDelegate.h */,
@@ -453,7 +498,7 @@
 		3DC5DC2D152A6C7D0093B884 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3DF3A2E4152A97B6004A7A6C /* carta2.png */,
+				3DC495EC152B9CDA00101CA0 /* Cartas */,
 				3DC5DC2E152A6C7D0093B884 /* Default.png */,
 				3DC5DC30152A6C7D0093B884 /* fps_images.png */,
 				3DC5DC32152A6C7D0093B884 /* Icon-72.png */,
@@ -779,6 +824,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3DF3059F152CD1B000F3B92B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3DF305A1152CD1D700F3B92B /* NSArray+Helpers.h */,
+				3DF305A2152CD1D700F3B92B /* NSArray+Helpers.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		3DF3A2DA152A9121004A7A6C /* Niveles */ = {
 			isa = PBXGroup;
 			children = (
@@ -811,6 +865,8 @@
 			children = (
 				3DC5DD93152A7BCD0093B884 /* CreacionElementos.h */,
 				3DC5DD94152A7BCD0093B884 /* CreacionElementos.m */,
+				3DDA4AEF153650670097F9C9 /* Card.h */,
+				3DDA4AF0153650670097F9C9 /* Card.m */,
 			);
 			name = Apoyo;
 			sourceTree = "<group>";
@@ -874,7 +930,17 @@
 				3DC5DC3B152A6C7D0093B884 /* Icon.png in Resources */,
 				3DC5DC3D152A6C7D0093B884 /* Icon@2x.png in Resources */,
 				3DC5DC40152A6C7D0093B884 /* iTunesArtwork in Resources */,
-				3DF3A2E5152A97B6004A7A6C /* carta2.png in Resources */,
+				3DC495F9152B9CF600101CA0 /* carta1.png in Resources */,
+				3DC495FA152B9CF600101CA0 /* carta1a.png in Resources */,
+				3DC495FB152B9CF600101CA0 /* carta2.png in Resources */,
+				3DC495FC152B9CF600101CA0 /* carta2a.png in Resources */,
+				3DC495FD152B9CF600101CA0 /* carta3.png in Resources */,
+				3DC495FE152B9CF600101CA0 /* carta3a.png in Resources */,
+				3DC495FF152B9CF600101CA0 /* carta4.png in Resources */,
+				3DC49600152B9CF600101CA0 /* carta4a.png in Resources */,
+				3DC49601152B9CF600101CA0 /* carta5.png in Resources */,
+				3DC49602152B9CF600101CA0 /* carta5a.png in Resources */,
+				3DC49603152B9CF600101CA0 /* fondo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -989,6 +1055,8 @@
 				3DF3A2D1152A9053004A7A6C /* NivelUno.m in Sources */,
 				3DF3A2E0152A918B004A7A6C /* NivelDos.m in Sources */,
 				3DF3A2E3152A9195004A7A6C /* NivelTres.m in Sources */,
+				3DF305A3152CD1D700F3B92B /* NSArray+Helpers.m in Sources */,
+				3DDA4AF1153650670097F9C9 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

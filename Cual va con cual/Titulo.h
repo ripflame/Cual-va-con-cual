@@ -11,6 +11,7 @@
 #import "CreacionElementos.h"
 #import "Dificultad.h"
 #import "Instrucciones.h"
+#import "NivelUno.h"
 
 @interface Titulo : CCLayer 
 {

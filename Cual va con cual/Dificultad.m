@@ -50,16 +50,25 @@
 - (void)nivelUno:(id)sender
 {
     NSLog(@"Nivel 1");
+    
+    CCScene *scene = [NivelUno scene];
+    [[CCDirector sharedDirector] replaceScene:scene];
 }
 
 - (void)nivelDos:(id)sender
 {
     NSLog(@"Nivel 2");
+    
+    CCScene *scene = [NivelDos scene];
+    [[CCDirector sharedDirector] replaceScene:scene];
 }
 
 - (void)nivelTres:(id)sender
 {
     NSLog(@"Nivel 3");
+    
+    CCScene *scene = [NivelTres scene];
+    [[CCDirector sharedDirector] replaceScene:scene];
 }
 
 - (void)atras:(id)sender
