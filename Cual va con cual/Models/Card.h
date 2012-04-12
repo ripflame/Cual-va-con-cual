@@ -14,6 +14,7 @@
 @property (nonatomic, retain) NSString *name;
 
 + (Card *)cardWithName:(NSString *)name;
++ (Card *)cardWithName:(NSString *)name andValue:(NSNumber *)value;
 
 - (BOOL)isEqualValue:(Card *)card;
 

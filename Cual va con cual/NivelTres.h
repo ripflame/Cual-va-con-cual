@@ -12,9 +12,6 @@
 #import "Titulo.h"
 
 @interface NivelTres : CCLayer
-{
-    CGSize size;
-}
 
 + (CCScene *)scene;
 

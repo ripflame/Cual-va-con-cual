@@ -16,6 +16,20 @@
 @end
 
 @implementation NivelUno
+{
+    CGSize size;
+    NSArray *cartas;
+    CCMenu *menuUno;
+    CCMenu *menuDos;
+    int cartaUno;
+    int cartaDos;
+    
+    int cartasVisibles;
+    CCMenuItemImage *cartaAnterior;
+    CCMenuItemImage *cartaAnteAnterior;
+    
+    int parejasEncontradas;
+}
 
 +(CCScene *) scene
 {
@@ -44,10 +58,11 @@
         
         CCMenuItemLabel *atrasButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Atrás" tamano:32] target:self selector:@selector(atras:)];
         CCMenu *menu = [CCMenu menuWithItems:atrasButton, nil];
-        menu.position = ccp(size.width - atrasButton.contentSize.width/2, atrasButton.contentSize.height/2);
+        menu.position = ccp(atrasButton.contentSize.width/2, atrasButton.contentSize.height/2);
         [self addChild:menu z:1];
         
         cartasVisibles = 0;
+        parejasEncontradas = 0;
         
         [self escogerCartas];
         [self crearSprites:4];
@@ -59,25 +74,17 @@
 #pragma mark - Acciones
 
 - (void)escogerCartas
-{
-    /* Ahora tu arreglo será de objetos tipo Carta */
-    cartaUno = (arc4random() % 5)+1;
-    cartaDos = (arc4random() % 5)+1;
+{    
+    NSMutableArray *tmpArray = [[NSMutableArray alloc] initWithCapacity:4];
+    int randomNum;
     
-    /* Aqui deberias agregar otro metodo que reciba value como segundo parametro :P */
-    Card *_cartaUno = [Card cardWithName:[NSString stringWithFormat:@"carta%d.png", cartaUno]];
-    _cartaUno.value = [NSNumber numberWithInt:cartaUno];
+    for (int i = 0; i < 2; i++) {
+        randomNum = (arc4random() % 5)+1;
+        [tmpArray addObject:[Card cardWithName:[NSString stringWithFormat:@"carta%da.png", randomNum] andValue:[NSNumber numberWithInt:randomNum]]];
+        [tmpArray addObject:[Card cardWithName:[NSString stringWithFormat:@"carta%d.png", randomNum] andValue:[NSNumber numberWithInt:randomNum]]];
+    }
     
-    Card *_cartaUnoA = [Card cardWithName:[NSString stringWithFormat:@"carta%da.png", cartaUno]];
-    _cartaUnoA.value = [NSNumber numberWithInt:cartaUno];
-    
-    Card *_cartaDos = [Card cardWithName:[NSString stringWithFormat:@"carta%d.png", cartaDos]];
-    _cartaDos.value = [NSNumber numberWithInt:cartaDos];
-    
-    Card *_cartaDosA = [Card cardWithName:[NSString stringWithFormat:@"carta%da.png", cartaDos]];
-    _cartaDosA.value = [NSNumber numberWithInt:cartaDos];
-
-    cartas = [[NSArray arrayWithObjects:_cartaUno, _cartaUnoA, _cartaDos, _cartaDosA, nil] shuffled];
+    cartas = [[NSArray arrayWithArray:tmpArray] shuffled];
     [cartas retain];
 }
 
@@ -92,6 +99,7 @@
     NSLog(@"seleccionado %d", sender.tag);
     
     Card *currentCard = [cartas objectAtIndex:sender.tag];
+    Card *previousCard = [cartas objectAtIndex:cartaAnterior.tag];
     
     if (cartasVisibles == 2) {
         cartaAnterior.normalImage = [CCSprite spriteWithFile:@"fondo.png"];
@@ -105,23 +113,17 @@
         cartaAnterior = sender;
         cartasVisibles = 1;
     } else if (cartasVisibles == 1) {
-        if (1 == 2) { // SERIOUSLY ?!
-            sender.normalImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
-            sender.selectedImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
+        if ([currentCard isEqualValue:previousCard]) {
+            sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
+            sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
             [sender setIsEnabled:NO];
             [cartaAnterior setIsEnabled:NO];
             cartasVisibles = 0;
-        } else {
-            NSLog(@"Comparando ando");
-            // Aqui es donde comparo ¿No?
-            Card *previousCard = [cartas objectAtIndex:cartaAnterior.tag];
-            
-            if ([currentCard isEqualValue:previousCard]) {
-                NSLog(@"Le atinaste");
-            }else{
-                NSLog(@"Try again");
+            parejasEncontradas++;
+            if (parejasEncontradas >= 2) {
+                [self performSelector:@selector(mostrarBotonReset:)];
             }
-            
+        } else {
             sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
             sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
             cartaAnteAnterior = cartaAnterior;
@@ -134,6 +136,22 @@
         cartaAnterior = sender;
         cartasVisibles = 1;
     }
+}
+
+- (void)mostrarBotonReset:(id)sender
+{
+    CCMenuItemLabel *otroJuegoButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Otro Juego" tamano:32] target:self selector:@selector(reset:)];
+    CCMenu *menu = [CCMenu menuWithItems:otroJuegoButton, nil];
+    menu.position = ccp(size.width - otroJuegoButton.contentSize.width/2, otroJuegoButton.contentSize.height/2);
+    [self addChild:menu z:1 tag:100];
+}
+
+- (void)reset:(id)sender
+{
+    [self removeChildByTag:100 cleanup:YES];
+    parejasEncontradas = 0;
+    [self escogerCartas];
+    [self crearSprites:4];
 }
 
 - (void)crearSprites:(int)numero

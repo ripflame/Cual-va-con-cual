@@ -48,7 +48,7 @@
         
         CCMenuItemLabel *atrasButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Atrás" tamano:32] target:self selector:@selector(atras:)];
         CCMenu *menu = [CCMenu menuWithItems:atrasButton, nil];
-        menu.position = ccp(size.width - atrasButton.contentSize.width, atrasButton.contentSize.height);
+        menu.position = ccp(atrasButton.contentSize.width, atrasButton.contentSize.height);
         [self addChild:menu z:1];
     }
     
