@@ -7,6 +7,7 @@
 //
 
 #import "NivelUno.h"
+#import "Card.h"
 
 @interface NivelUno()
 - (void)atras:(id)sender;
@@ -59,13 +60,24 @@
 
 - (void)escogerCartas
 {
+    /* Ahora tu arreglo será de objetos tipo Carta */
     cartaUno = (arc4random() % 5)+1;
     cartaDos = (arc4random() % 5)+1;
-    NSString *imagenUno = [NSString stringWithFormat:@"carta%d.png", cartaUno];
-    NSString *imagenUnoA = [NSString stringWithFormat:@"carta%da.png", cartaUno];
-    NSString *imagenDos = [NSString stringWithFormat:@"carta%d.png", cartaDos];
-    NSString *imagenDosA = [NSString stringWithFormat:@"carta%da.png", cartaDos];
-    cartas = [[NSArray arrayWithObjects:imagenUno, imagenUnoA, imagenDos, imagenDosA, nil] shuffled];
+    
+    /* Aqui deberias agregar otro metodo que reciba value como segundo parametro :P */
+    Card *_cartaUno = [Card cardWithName:[NSString stringWithFormat:@"carta%d.png", cartaUno]];
+    _cartaUno.value = [NSNumber numberWithInt:cartaUno];
+    
+    Card *_cartaUnoA = [Card cardWithName:[NSString stringWithFormat:@"carta%da.png", cartaUno]];
+    _cartaUnoA.value = [NSNumber numberWithInt:cartaUno];
+    
+    Card *_cartaDos = [Card cardWithName:[NSString stringWithFormat:@"carta%d.png", cartaDos]];
+    _cartaDos.value = [NSNumber numberWithInt:cartaDos];
+    
+    Card *_cartaDosA = [Card cardWithName:[NSString stringWithFormat:@"carta%da.png", cartaDos]];
+    _cartaDosA.value = [NSNumber numberWithInt:cartaDos];
+
+    cartas = [[NSArray arrayWithObjects:_cartaUno, _cartaUnoA, _cartaDos, _cartaDosA, nil] shuffled];
     [cartas retain];
 }
 
@@ -77,34 +89,48 @@
 
 - (void)spriteSelected:(CCMenuItemImage *)sender
 {
-    NSLog(@"seleccionado");
+    NSLog(@"seleccionado %d", sender.tag);
+    
+    Card *currentCard = [cartas objectAtIndex:sender.tag];
     
     if (cartasVisibles == 2) {
         cartaAnterior.normalImage = [CCSprite spriteWithFile:@"fondo.png"];
         cartaAnterior.selectedImage = [CCSprite spriteWithFile:@"fondo.png"];
         cartaAnteAnterior.normalImage = [CCSprite spriteWithFile:@"fondo.png"];
         cartaAnteAnterior.selectedImage = [CCSprite spriteWithFile:@"fondo.png"];
-        sender.normalImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
-        sender.selectedImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
+        
+        sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
+        sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
+        
         cartaAnterior = sender;
         cartasVisibles = 1;
     } else if (cartasVisibles == 1) {
-        if (1 == 2) {
+        if (1 == 2) { // SERIOUSLY ?!
             sender.normalImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
             sender.selectedImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
             [sender setIsEnabled:NO];
             [cartaAnterior setIsEnabled:NO];
             cartasVisibles = 0;
         } else {
-            sender.normalImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
-            sender.selectedImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
+            NSLog(@"Comparando ando");
+            // Aqui es donde comparo ¿No?
+            Card *previousCard = [cartas objectAtIndex:cartaAnterior.tag];
+            
+            if ([currentCard isEqualValue:previousCard]) {
+                NSLog(@"Le atinaste");
+            }else{
+                NSLog(@"Try again");
+            }
+            
+            sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
+            sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
             cartaAnteAnterior = cartaAnterior;
             cartaAnterior = sender;
             cartasVisibles = 2;
         }
     } else {
-        sender.normalImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
-        sender.selectedImage = [CCSprite spriteWithFile:[cartas objectAtIndex:sender.tag]];
+        sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
+        sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
         cartaAnterior = sender;
         cartasVisibles = 1;
     }
