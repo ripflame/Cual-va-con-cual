@@ -75,7 +75,7 @@
 
 - (void)escogerCartas
 {    
-    NSMutableArray *tmpArray = [[NSMutableArray alloc] initWithCapacity:4];
+    NSMutableArray *tmpArray = [[[NSMutableArray alloc] initWithCapacity:4] autorelease];
     int randomNum;
     
     for (int i = 0; i < 2; i++) {
