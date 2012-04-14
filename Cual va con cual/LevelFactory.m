@@ -68,15 +68,24 @@
      Utiliza [NSMutableArray array];
      **/
     NSMutableArray *tmpArray = [NSMutableArray array];
+    NSMutableArray *cartasEscogidas = [NSMutableArray array];
     
     int randomNum;
     
     for (int i = 0; i < cantidad/2; i++) {
         randomNum = (arc4random() % 5)+1;
+        
+        while ([cartasEscogidas containsObject:[NSNumber numberWithInt:randomNum]]) {
+            randomNum = (arc4random() % 5)+1;
+        }
+        
+        [cartasEscogidas addObject:[NSNumber numberWithInt:randomNum]];
+        
         Card *card = [Card cardWithName:[NSString stringWithFormat:@"carta%da.png", randomNum] 
                                andValue:[NSNumber numberWithInt:randomNum]];
         [tmpArray addObject:card];
-        [tmpArray addObject:card];
+        Card *cardPair = [Card cardWithName:[NSString stringWithFormat:@"carta%d.png", randomNum] andValue:[NSNumber numberWithInt:randomNum]];
+        [tmpArray addObject:cardPair];
     }
     
     // El metodo 'shuffled' es de instancia, en vez de
