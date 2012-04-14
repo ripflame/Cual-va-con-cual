@@ -55,13 +55,6 @@
 - (void)nivelUno:(id)sender
 {
     NSLog(@"Nivel 1");
-    /**
-     HINT:
-     Lo correcto es que tengas un CCScene para gestionar niveles
-     Luego unicamente le pasas el nivel correspondiente, Ej.
-     GameScene *gameScene = [GameScene scene];
-     gameScene.level = [LevelFactory createLevel:kFirstLevel];
-     **/
     CCScene *scene = [LevelFactory sceneForLevel:1];
     [[CCDirector sharedDirector] replaceScene:scene];
 }

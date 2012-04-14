@@ -13,6 +13,9 @@
 #import "Titulo.h"
 
 @interface LevelFactory()
+- (id)initWithLevel:(NSInteger)level;
+- (void)escogerCartas:(NSUInteger)cantidad;
+- (void)crearSprites:(int)numero;
 @end
 
 @implementation LevelFactory
@@ -65,13 +68,7 @@
 #pragma mark - Acciones
 
 - (void)escogerCartas:(NSUInteger)cantidad
-{    
-    /**
-     HINT:
-     Si sabes que el objeto debe ser autorelease, usa los metodos de conveniencia
-     En vez de [[[NSMutableArray alloc] init] autorelease];
-     Utiliza [NSMutableArray array];
-     **/
+{
     NSMutableArray *tmpArray = [NSMutableArray array];
     NSMutableArray *cartasEscogidas = [NSMutableArray array];
     
@@ -93,9 +90,6 @@
         [tmpArray addObject:cardPair];
     }
     
-    // El metodo 'shuffled' es de instancia, en vez de
-    // cartas = [[NSArray arrayWithArray:tmpArray] shuffled];
-    // podias hacer esto:
     cartas = [tmpArray shuffled];
     [cartas retain];
 }
@@ -116,11 +110,14 @@
     if (cartasVisibles == 2) {
         cartaAnterior.normalImage = [CCSprite spriteWithFile:@"fondo.png"];
         cartaAnterior.selectedImage = [CCSprite spriteWithFile:@"fondo.png"];
+        [cartaAnterior setIsEnabled:YES];
         cartaAnteAnterior.normalImage = [CCSprite spriteWithFile:@"fondo.png"];
         cartaAnteAnterior.selectedImage = [CCSprite spriteWithFile:@"fondo.png"];
+        [cartaAnteAnterior setIsEnabled:YES];
         
         sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
         sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
+        [sender setIsEnabled:NO];
         
         cartaAnterior = sender;
         cartasVisibles = 1;
@@ -138,6 +135,7 @@
         } else {
             sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
             sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
+            [sender setIsEnabled:NO];
             cartaAnteAnterior = cartaAnterior;
             cartaAnterior = sender;
             cartasVisibles = 2;
@@ -145,6 +143,7 @@
     } else {
         sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
         sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
+        [sender setIsEnabled:NO];
         cartaAnterior = sender;
         cartasVisibles = 1;
     }
