@@ -34,6 +34,10 @@
     if (self) {
         size = [[CCDirector sharedDirector] winSize];
         
+        CCSprite *bg = [CCSprite spriteWithFile:@"bg1.png"];
+        bg.position = ccp(size.width/2, size.height/2);
+        [self addChild:bg z:0];
+        
         CCLabelTTF *titulo = [CreacionElementos crearLabelConTexto:@"¿Cuál va con cuál?" tamano:40];
         titulo.position = ccp(size.width/2, size.height - titulo.contentSize.height);
         [self addChild:titulo z:1];

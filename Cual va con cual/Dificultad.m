@@ -36,6 +36,10 @@
     if (self) {
         size = [[CCDirector sharedDirector] winSize];
         
+        CCSprite *bg = [CCSprite spriteWithFile:@"bg2.png"];
+        bg.position = ccp(size.width/2, size.height/2);
+        [self addChild:bg z:0];
+        
         CCLabelTTF *titulo = [CreacionElementos crearLabelConTexto:@"Selecciona una dificultad" tamano:40];
         titulo.position = ccp(size.width/2, size.height - titulo.contentSize.height);
         [self addChild:titulo z:1];
@@ -99,7 +103,7 @@
     CCMenuItemLabel *atrasButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Atrás" tamano:32] target:self selector:@selector(atras:)];
     
     CCMenu *atrasButtonMenu = [CCMenu menuWithItems:atrasButton, nil];
-    atrasButtonMenu.position = ccp(size.width - atrasButton.contentSize.width, atrasButton.contentSize.height);
+    atrasButtonMenu.position = ccp(atrasButton.contentSize.width, atrasButton.contentSize.height);
     [self addChild:atrasButtonMenu z:1];
     
     CCMenu *menu = [CCMenu menuWithItems:nivelUnoButton, nivelDosButton, nivelTresButton, nil];

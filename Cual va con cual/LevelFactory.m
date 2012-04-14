@@ -35,10 +35,15 @@
         _level = level;
         
         size = [CCDirector sharedDirector].winSize;
+        
+        CCSprite *bg = [CCSprite spriteWithFile:@"bg4.png"];
+        bg.position = ccp(size.width/2, size.height/2);
+        [self addChild:bg z:0];
+        
         NSString *title = [NSString stringWithFormat:@"Nivel %d", level];
         
-        CCLabelTTF *titulo = [CCLabelTTF labelWithString:title fontName:@"Marker Felt" fontSize:40];
-        titulo.position = ccp(size.width/2, size.height - titulo.contentSize.height);
+        CCLabelTTF *titulo = [CCLabelTTF labelWithString:title fontName:@"Futura" fontSize:36];
+        titulo.position = ccp(size.width/2, size.height - titulo.contentSize.height/2);
         [self addChild:titulo z:1];
         
         CCMenuItemLabel *atrasButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Atrás" tamano:32] target:self selector:@selector(atras:)];
