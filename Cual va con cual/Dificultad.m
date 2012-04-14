@@ -7,6 +7,7 @@
 //
 
 #import "Dificultad.h"
+#import "LevelFactory.h"
 
 @interface Dificultad()
 - (void)crearMenu;
@@ -50,8 +51,14 @@
 - (void)nivelUno:(id)sender
 {
     NSLog(@"Nivel 1");
-    
-    CCScene *scene = [NivelUno scene];
+    /**
+     HINT:
+     Lo correcto es que tengas un CCScene para gestionar niveles
+     Luego unicamente le pasas el nivel correspondiente, Ej.
+     GameScene *gameScene = [GameScene scene];
+     gameScene.level = [LevelFactory createLevel:kFirstLevel];
+     **/
+    CCScene *scene = [LevelFactory sceneForLevel:1];
     [[CCDirector sharedDirector] replaceScene:scene];
 }
 
@@ -59,7 +66,7 @@
 {
     NSLog(@"Nivel 2");
     
-    CCScene *scene = [NivelDos scene];
+    CCScene *scene = [LevelFactory sceneForLevel:2];
     [[CCDirector sharedDirector] replaceScene:scene];
 }
 
@@ -67,7 +74,7 @@
 {
     NSLog(@"Nivel 3");
     
-    CCScene *scene = [NivelTres scene];
+    CCScene *scene = [LevelFactory sceneForLevel:3];
     [[CCDirector sharedDirector] replaceScene:scene];
 }
 
