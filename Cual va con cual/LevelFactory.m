@@ -1,60 +1,43 @@
 //
-//  NivelTres.m
+//  LevelFactory.m
 //  Cual va con cual
 //
-//  Created by Gilberto Leon on 02/04/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Created by Daniel Rueda Jimenez on 13/04/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "NivelTres.h"
+#import "LevelFactory.h"
+#import "CreacionElementos.h"
 #import "Card.h"
+#import "NSArray+Helpers.h"
+#import "Titulo.h"
 
-@interface NivelTres()
-- (void)atras:(id)sender;
-- (void)crearSprites:(int)numero;
-- (void)escogerCartas;
+@interface LevelFactory()
 @end
 
-@implementation NivelTres
-{
-    CGSize size;
-    NSArray *cartas;
-    CCMenu *menuUno;
-    CCMenu *menuDos;
-    int cartaUno;
-    int cartaDos;
-    int cartaTres;
-    int cartaCuatro;
-    
-    int cartasVisibles;
-    CCMenuItemImage *cartaAnterior;
-    CCMenuItemImage *cartaAnteAnterior;
-    
-    int parejasEncontradas;
-}
+@implementation LevelFactory
 
-+(CCScene *) scene
++(CCScene *) sceneForLevel:(NSInteger)level
 {
-	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
 	
-	// 'layer' is an autorelease object.
-	NivelUno *layer = [NivelTres node];
+	LevelFactory *layer = [[[LevelFactory alloc] initWithLevel:level] autorelease];
 	
-	// add layer as a child to scene
 	[scene addChild: layer];
 	
-	// return the scene
 	return scene;
 }
 
-- (id)init
+- (id)initWithLevel:(NSInteger)level
 {
     self = [super init];
     if (self) {
-        size = [[CCDirector sharedDirector] winSize];
+        _level = level;
         
-        CCLabelTTF *titulo = [CCLabelTTF labelWithString:@"Nivel 3" fontName:@"Marker Felt" fontSize:40];
+        size = [CCDirector sharedDirector].winSize;
+        NSString *title = [NSString stringWithFormat:@"Nivel %d", level];
+        
+        CCLabelTTF *titulo = [CCLabelTTF labelWithString:title fontName:@"Marker Felt" fontSize:40];
         titulo.position = ccp(size.width/2, size.height - titulo.contentSize.height);
         [self addChild:titulo z:1];
         
@@ -66,27 +49,40 @@
         cartasVisibles = 0;
         parejasEncontradas = 0;
         
+        NSUInteger cards = 2 + _level*2;
+        
         [self escogerCartas];
-        [self crearSprites:8];
+        [self crearSprites:cards];
     }
-    
     return self;
 }
 
 #pragma mark - Acciones
 
 - (void)escogerCartas
-{
-    NSMutableArray *tmpArray = [[[NSMutableArray alloc] initWithCapacity:8] autorelease];
+{    
+    /**
+     HINT:
+     Si sabes que el objeto debe ser autorelease, usa los metodos de conveniencia
+     En vez de [[[NSMutableArray alloc] init] autorelease];
+     Utiliza [NSMutableArray array];
+     **/
+    NSMutableArray *tmpArray = [NSMutableArray array];
+    
     int randomNum;
     
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 2; i++) {
         randomNum = (arc4random() % 5)+1;
-        [tmpArray addObject:[Card cardWithName:[NSString stringWithFormat:@"carta%da.png", randomNum] andValue:[NSNumber numberWithInt:randomNum]]];
-        [tmpArray addObject:[Card cardWithName:[NSString stringWithFormat:@"carta%d.png", randomNum] andValue:[NSNumber numberWithInt:randomNum]]];
+        Card *card = [Card cardWithName:[NSString stringWithFormat:@"carta%da.png", randomNum] 
+                               andValue:[NSNumber numberWithInt:randomNum]];
+        [tmpArray addObject:card];
+        [tmpArray addObject:card];
     }
     
-    cartas = [[NSArray arrayWithArray:tmpArray] shuffled];
+    // El metodo 'shuffled' es de instancia, en vez de
+    // cartas = [[NSArray arrayWithArray:tmpArray] shuffled];
+    // podias hacer esto:
+    cartas = [tmpArray shuffled];
     [cartas retain];
 }
 
@@ -122,7 +118,7 @@
             [cartaAnterior setIsEnabled:NO];
             cartasVisibles = 0;
             parejasEncontradas++;
-            if (parejasEncontradas >= 4) {
+            if (parejasEncontradas >= cartas.count/2) {
                 [self performSelector:@selector(mostrarBotonReset:)];
             }
         } else {
@@ -153,7 +149,7 @@
     [self removeChildByTag:100 cleanup:YES];
     parejasEncontradas = 0;
     [self escogerCartas];
-    [self crearSprites:8];
+    [self crearSprites:cartas.count];
 }
 
 - (void)crearSprites:(int)numero
