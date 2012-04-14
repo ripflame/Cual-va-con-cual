@@ -35,12 +35,12 @@
 
 + (Card *)cardWithName:(NSString *)name
 {
-    return [[Card alloc] initWithName:name];
+    return [[[Card alloc] initWithName:name] autorelease];
 }
 
 + (Card *)cardWithName:(NSString *)name andValue:(NSNumber *)value
 {
-    return [[Card alloc] initWithName:name value:value];
+    return [[[Card alloc] initWithName:name value:value] autorelease];
 }
 
 - (void)dealloc
