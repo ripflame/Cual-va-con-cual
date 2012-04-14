@@ -137,9 +137,7 @@
 		3DC5DD95152A7BCD0093B884 /* CreacionElementos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5DD94152A7BCD0093B884 /* CreacionElementos.m */; };
 		3DF305A3152CD1D700F3B92B /* NSArray+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF305A2152CD1D700F3B92B /* NSArray+Helpers.m */; };
 		3DF3A2CD152A8D94004A7A6C /* Instrucciones.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2CC152A8D94004A7A6C /* Instrucciones.m */; };
-		3DF3A2D1152A9053004A7A6C /* NivelUno.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2D0152A9053004A7A6C /* NivelUno.m */; };
-		3DF3A2E0152A918B004A7A6C /* NivelDos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2DF152A918B004A7A6C /* NivelDos.m */; };
-		3DF3A2E3152A9195004A7A6C /* NivelTres.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A2E2152A9195004A7A6C /* NivelTres.m */; };
+		4B28A6D715390CE2000C3EBA /* LevelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B28A6D615390CE2000C3EBA /* LevelFactory.m */; };
 		4BC2D48E15366F0700CD1B15 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2D48D15366F0700CD1B15 /* Card.m */; };
 /* End PBXBuildFile section */
 
@@ -398,12 +396,8 @@
 		3DF305A2152CD1D700F3B92B /* NSArray+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Helpers.m"; sourceTree = "<group>"; };
 		3DF3A2CB152A8D94004A7A6C /* Instrucciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instrucciones.h; sourceTree = "<group>"; };
 		3DF3A2CC152A8D94004A7A6C /* Instrucciones.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instrucciones.m; sourceTree = "<group>"; };
-		3DF3A2CF152A9053004A7A6C /* NivelUno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NivelUno.h; sourceTree = "<group>"; };
-		3DF3A2D0152A9053004A7A6C /* NivelUno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NivelUno.m; sourceTree = "<group>"; };
-		3DF3A2DE152A918B004A7A6C /* NivelDos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NivelDos.h; sourceTree = "<group>"; };
-		3DF3A2DF152A918B004A7A6C /* NivelDos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NivelDos.m; sourceTree = "<group>"; };
-		3DF3A2E1152A9195004A7A6C /* NivelTres.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NivelTres.h; sourceTree = "<group>"; };
-		3DF3A2E2152A9195004A7A6C /* NivelTres.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NivelTres.m; sourceTree = "<group>"; };
+		4B28A6D515390CE2000C3EBA /* LevelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelFactory.h; sourceTree = "<group>"; };
+		4B28A6D615390CE2000C3EBA /* LevelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelFactory.m; sourceTree = "<group>"; };
 		4BC2D48C15366F0700CD1B15 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Models/Card.h; sourceTree = "<group>"; };
 		4BC2D48D15366F0700CD1B15 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Models/Card.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -837,12 +831,8 @@
 		3DF3A2DA152A9121004A7A6C /* Niveles */ = {
 			isa = PBXGroup;
 			children = (
-				3DF3A2CF152A9053004A7A6C /* NivelUno.h */,
-				3DF3A2D0152A9053004A7A6C /* NivelUno.m */,
-				3DF3A2DE152A918B004A7A6C /* NivelDos.h */,
-				3DF3A2DF152A918B004A7A6C /* NivelDos.m */,
-				3DF3A2E1152A9195004A7A6C /* NivelTres.h */,
-				3DF3A2E2152A9195004A7A6C /* NivelTres.m */,
+				4B28A6D515390CE2000C3EBA /* LevelFactory.h */,
+				4B28A6D615390CE2000C3EBA /* LevelFactory.m */,
 			);
 			name = Niveles;
 			sourceTree = "<group>";
@@ -1060,11 +1050,9 @@
 				3DC5DD92152A7B050093B884 /* Dificultad.m in Sources */,
 				3DC5DD95152A7BCD0093B884 /* CreacionElementos.m in Sources */,
 				3DF3A2CD152A8D94004A7A6C /* Instrucciones.m in Sources */,
-				3DF3A2D1152A9053004A7A6C /* NivelUno.m in Sources */,
-				3DF3A2E0152A918B004A7A6C /* NivelDos.m in Sources */,
-				3DF3A2E3152A9195004A7A6C /* NivelTres.m in Sources */,
 				3DF305A3152CD1D700F3B92B /* NSArray+Helpers.m in Sources */,
 				4BC2D48E15366F0700CD1B15 /* Card.m in Sources */,
+				4B28A6D715390CE2000C3EBA /* LevelFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
