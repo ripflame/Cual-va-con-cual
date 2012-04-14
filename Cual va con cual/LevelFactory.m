@@ -51,7 +51,7 @@
         
         NSUInteger cards = 2 + _level*2;
         
-        [self escogerCartas];
+        [self escogerCartas:cards];
         [self crearSprites:cards];
     }
     return self;
@@ -59,7 +59,7 @@
 
 #pragma mark - Acciones
 
-- (void)escogerCartas
+- (void)escogerCartas:(NSUInteger)cantidad
 {    
     /**
      HINT:
@@ -71,7 +71,7 @@
     
     int randomNum;
     
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < cantidad/2; i++) {
         randomNum = (arc4random() % 5)+1;
         Card *card = [Card cardWithName:[NSString stringWithFormat:@"carta%da.png", randomNum] 
                                andValue:[NSNumber numberWithInt:randomNum]];
@@ -148,7 +148,7 @@
 {
     [self removeChildByTag:100 cleanup:YES];
     parejasEncontradas = 0;
-    [self escogerCartas];
+    [self escogerCartas:cartas.count];
     [self crearSprites:cartas.count];
 }
 
