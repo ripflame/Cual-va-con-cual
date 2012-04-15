@@ -80,8 +80,6 @@
 {
     NSLog(@"Atrás");
     [[CCDirector sharedDirector] popScene];
-    //CCScene *scene = [Titulo scene];
-    //[[CCDirector sharedDirector] replaceScene:scene];
 }
 
 #pragma mark - Creación de elementos

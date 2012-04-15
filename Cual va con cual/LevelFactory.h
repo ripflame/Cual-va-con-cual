@@ -29,6 +29,7 @@ typedef enum {
     CCMenuItemImage *cartaAnteAnterior;
     
     int parejasEncontradas;
+    kGameLevel currentLevel;
 }
 
 +(CCScene *) sceneForLevel:(kGameLevel)level;

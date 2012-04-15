@@ -30,12 +30,22 @@
 	return scene;
 }
 
+- (NSInteger)numOfCardsForLevel:(kGameLevel)level
+{
+    return 2 + (level + 1)*2;
+}
+
+- (NSInteger)numOfCardsForCurrentLevel
+{
+    return [self numOfCardsForLevel:currentLevel];
+}
+
 - (id)initWithLevel:(kGameLevel)level
 {
     self = [super init];
     if (self) {
         size = [CCDirector sharedDirector].winSize;
-        
+        currentLevel = level;
         CCSprite *bg = [CCSprite spriteWithFile:@"bg4.png"];
         bg.position = ccp(size.width/2, size.height/2);
         [self addChild:bg z:0];
@@ -53,6 +63,8 @@
         
         cartasVisibles = 0;
         parejasEncontradas = 0;
+        
+        NSUInteger numCards = [self numOfCardsForCurrentLevel]; // enum empieza en cero, kFirstLevel = 0
         
         /**
          Como ya se maneja una estructura para niveles, puedes usar un switch
@@ -74,8 +86,6 @@
             break;
          }
          **/
-        
-        NSUInteger numCards = 2 + (level + 1)*2; // enum empieza en cero, kFirstLevel = 0
         
         [self escogerCartas:numCards];
         [self crearSprites:numCards];
@@ -115,8 +125,6 @@
 - (void)atras:(id)sender
 {
     [[CCDirector sharedDirector] popScene];
-    //CCScene *scene = [Titulo scene];
-    //[[CCDirector sharedDirector] replaceScene:scene];
 }
 
 - (void)spriteSelected:(CCMenuItemImage *)sender
@@ -170,8 +178,6 @@
 
 - (void)mostrarBotonReset:(id)sender
 {
-    NSLog(@"Aqui ya gane, no?");
-    
     CCMenuItemLabel *otroJuegoButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Otro Juego" tamano:32] target:self selector:@selector(reset:)];
     CCMenu *menu = [CCMenu menuWithItems:otroJuegoButton, nil];
     menu.position = ccp(size.width - otroJuegoButton.contentSize.width/2, otroJuegoButton.contentSize.height/2);
@@ -182,8 +188,10 @@
 {
     [self removeChildByTag:100 cleanup:YES];
     parejasEncontradas = 0;
-    [self escogerCartas:cartas.count];
-    [self crearSprites:cartas.count];
+    
+    NSInteger numCards = [self numOfCardsForCurrentLevel];
+    [self escogerCartas:numCards];
+    [self crearSprites:numCards];
 }
 
 - (void)crearSprites:(int)numero

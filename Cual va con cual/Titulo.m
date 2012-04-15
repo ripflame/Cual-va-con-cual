@@ -69,7 +69,6 @@
     
     CCScene *scene = [Instrucciones scene];
     [[CCDirector sharedDirector] pushScene:scene];
-    //[[CCDirector sharedDirector] replaceScene:scene];
 }
 
 #pragma mark - Creación de elementos

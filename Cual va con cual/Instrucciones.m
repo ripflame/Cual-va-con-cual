@@ -29,8 +29,6 @@
 - (void)atras:(id)sender
 {
     [[CCDirector sharedDirector] popScene];
-    //CCScene *scene = [Titulo scene];
-    //[[CCDirector sharedDirector] replaceScene:scene];
 }
 
 - (id)init
