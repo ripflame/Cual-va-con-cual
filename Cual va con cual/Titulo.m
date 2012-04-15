@@ -53,9 +53,14 @@
 - (void)dificultad:(id)sender
 {
     NSLog(@"dificultad");
-    
+    /**
+     Como es un juego sencillo, es mejor manejar un stack de escenas
+     Así "regresar" es más facil porque no necesitas conocer el tipo
+     de escena previa :D
+     **/
     CCScene *scene = [Dificultad scene];
-    [[CCDirector sharedDirector] replaceScene:scene];
+    [[CCDirector sharedDirector] pushScene:scene];
+    //[[CCDirector sharedDirector] replaceScene:scene];
 }
 
 - (void)instrucciones:(id)sender
@@ -63,7 +68,7 @@
     NSLog(@"instrucciones");
     
     CCScene *scene = [Instrucciones scene];
-    [[CCDirector sharedDirector] replaceScene:scene];
+    [[CCDirector sharedDirector] pushScene:scene];
 }
 
 #pragma mark - Creación de elementos

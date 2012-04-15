@@ -10,17 +10,16 @@
 #import "CreacionElementos.h"
 #import "Card.h"
 #import "NSArray+Helpers.h"
-#import "Titulo.h"
 
 @interface LevelFactory()
-- (id)initWithLevel:(NSInteger)level;
+- (id)initWithLevel:(kGameLevel)level;
 - (void)escogerCartas:(NSUInteger)cantidad;
 - (void)crearSprites:(int)numero;
 @end
 
 @implementation LevelFactory
 
-+(CCScene *) sceneForLevel:(NSInteger)level
++(CCScene *) sceneForLevel:(kGameLevel)level
 {
 	CCScene *scene = [CCScene node];
 	
@@ -31,14 +30,22 @@
 	return scene;
 }
 
-- (id)initWithLevel:(NSInteger)level
+- (NSInteger)numOfCardsForLevel:(kGameLevel)level
+{
+    return 2 + (level + 1)*2;
+}
+
+- (NSInteger)numOfCardsForCurrentLevel
+{
+    return [self numOfCardsForLevel:currentLevel];
+}
+
+- (id)initWithLevel:(kGameLevel)level
 {
     self = [super init];
     if (self) {
-        _level = level;
-        
         size = [CCDirector sharedDirector].winSize;
-        
+        currentLevel = level;
         CCSprite *bg = [CCSprite spriteWithFile:@"bg4.png"];
         bg.position = ccp(size.width/2, size.height/2);
         [self addChild:bg z:0];
@@ -57,10 +64,31 @@
         cartasVisibles = 0;
         parejasEncontradas = 0;
         
-        NSUInteger cards = 2 + _level*2;
+        NSUInteger numCards = [self numOfCardsForCurrentLevel]; // enum empieza en cero, kFirstLevel = 0
         
-        [self escogerCartas:cards];
-        [self crearSprites:cards];
+        /**
+         Como ya se maneja una estructura para niveles, puedes usar un switch
+         Ej.
+         switch (level) {
+            case kFirstLevel:
+            [self configureEasyLevel];
+            break;
+         
+            case kSecondLevel:
+            [self configureMediumLevel];
+            break;
+         
+            case kThirdLevel:
+            [self configureHardLevel];
+            break;
+         
+            default:
+            break;
+         }
+         **/
+        
+        [self escogerCartas:numCards];
+        [self crearSprites:numCards];
     }
     return self;
 }
@@ -96,8 +124,7 @@
 
 - (void)atras:(id)sender
 {
-    CCScene *scene = [Titulo scene];
-    [[CCDirector sharedDirector] replaceScene:scene];
+    [[CCDirector sharedDirector] popScene];
 }
 
 - (void)spriteSelected:(CCMenuItemImage *)sender
@@ -161,8 +188,10 @@
 {
     [self removeChildByTag:100 cleanup:YES];
     parejasEncontradas = 0;
-    [self escogerCartas:cartas.count];
-    [self crearSprites:cartas.count];
+    
+    NSInteger numCards = [self numOfCardsForCurrentLevel];
+    [self escogerCartas:numCards];
+    [self crearSprites:numCards];
 }
 
 - (void)crearSprites:(int)numero
