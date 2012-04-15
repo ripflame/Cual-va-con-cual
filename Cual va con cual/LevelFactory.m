@@ -10,17 +10,16 @@
 #import "CreacionElementos.h"
 #import "Card.h"
 #import "NSArray+Helpers.h"
-#import "Titulo.h"
 
 @interface LevelFactory()
-- (id)initWithLevel:(NSInteger)level;
+- (id)initWithLevel:(kGameLevel)level;
 - (void)escogerCartas:(NSUInteger)cantidad;
 - (void)crearSprites:(int)numero;
 @end
 
 @implementation LevelFactory
 
-+(CCScene *) sceneForLevel:(NSInteger)level
++(CCScene *) sceneForLevel:(kGameLevel)level
 {
 	CCScene *scene = [CCScene node];
 	
@@ -31,12 +30,10 @@
 	return scene;
 }
 
-- (id)initWithLevel:(NSInteger)level
+- (id)initWithLevel:(kGameLevel)level
 {
     self = [super init];
     if (self) {
-        _level = level;
-        
         size = [CCDirector sharedDirector].winSize;
         
         CCSprite *bg = [CCSprite spriteWithFile:@"bg4.png"];
@@ -57,10 +54,31 @@
         cartasVisibles = 0;
         parejasEncontradas = 0;
         
-        NSUInteger cards = 2 + _level*2;
+        /**
+         Como ya se maneja una estructura para niveles, puedes usar un switch
+         Ej.
+         switch (level) {
+            case kFirstLevel:
+            [self configureEasyLevel];
+            break;
+         
+            case kSecondLevel:
+            [self configureMediumLevel];
+            break;
+         
+            case kThirdLevel:
+            [self configureHardLevel];
+            break;
+         
+            default:
+            break;
+         }
+         **/
         
-        [self escogerCartas:cards];
-        [self crearSprites:cards];
+        NSUInteger numCards = 2 + (level + 1)*2; // enum empieza en cero, kFirstLevel = 0
+        
+        [self escogerCartas:numCards];
+        [self crearSprites:numCards];
     }
     return self;
 }
@@ -96,8 +114,9 @@
 
 - (void)atras:(id)sender
 {
-    CCScene *scene = [Titulo scene];
-    [[CCDirector sharedDirector] replaceScene:scene];
+    [[CCDirector sharedDirector] popScene];
+    //CCScene *scene = [Titulo scene];
+    //[[CCDirector sharedDirector] replaceScene:scene];
 }
 
 - (void)spriteSelected:(CCMenuItemImage *)sender
@@ -151,6 +170,8 @@
 
 - (void)mostrarBotonReset:(id)sender
 {
+    NSLog(@"Aqui ya gane, no?");
+    
     CCMenuItemLabel *otroJuegoButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Otro Juego" tamano:32] target:self selector:@selector(reset:)];
     CCMenu *menu = [CCMenu menuWithItems:otroJuegoButton, nil];
     menu.position = ccp(size.width - otroJuegoButton.contentSize.width/2, otroJuegoButton.contentSize.height/2);

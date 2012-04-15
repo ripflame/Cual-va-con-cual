@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+typedef enum {
+    kFirstLevel,
+    kSecondLevel,
+    kThirdLevel
+}kGameLevel;
+
 @interface LevelFactory : CCLayer
 {
     CGSize size;
@@ -23,10 +29,8 @@
     CCMenuItemImage *cartaAnteAnterior;
     
     int parejasEncontradas;
-    
-    int _level;
 }
 
-+(CCScene *) sceneForLevel:(NSInteger)level;
++(CCScene *) sceneForLevel:(kGameLevel)level;
 
 @end

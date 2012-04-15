@@ -52,35 +52,36 @@
 
 #pragma mark - Acciones
 
+- (void)loadLevel:(kGameLevel)level
+{
+    CCScene *scene = [LevelFactory sceneForLevel:level];
+    [[CCDirector sharedDirector] pushScene:scene];
+}
+
 - (void)nivelUno:(id)sender
 {
     NSLog(@"Nivel 1");
-    CCScene *scene = [LevelFactory sceneForLevel:1];
-    [[CCDirector sharedDirector] replaceScene:scene];
+    [self loadLevel:kFirstLevel];
 }
 
 - (void)nivelDos:(id)sender
 {
     NSLog(@"Nivel 2");
-    
-    CCScene *scene = [LevelFactory sceneForLevel:2];
-    [[CCDirector sharedDirector] replaceScene:scene];
+    [self loadLevel:kSecondLevel];
 }
 
 - (void)nivelTres:(id)sender
 {
     NSLog(@"Nivel 3");
-    
-    CCScene *scene = [LevelFactory sceneForLevel:3];
-    [[CCDirector sharedDirector] replaceScene:scene];
+    [self loadLevel:kThirdLevel];
 }
 
 - (void)atras:(id)sender
 {
     NSLog(@"Atrás");
-    
-    CCScene *scene = [Titulo scene];
-    [[CCDirector sharedDirector] replaceScene:scene];
+    [[CCDirector sharedDirector] popScene];
+    //CCScene *scene = [Titulo scene];
+    //[[CCDirector sharedDirector] replaceScene:scene];
 }
 
 #pragma mark - Creación de elementos
