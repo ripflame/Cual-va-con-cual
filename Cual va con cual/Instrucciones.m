@@ -38,11 +38,15 @@
     if (self) {
         size = [[CCDirector sharedDirector] winSize];
         
+        CCSprite *bg = [CCSprite spriteWithFile:@"bg3.png"];
+        bg.position = ccp(size.width/2, size.height/2);
+        [self addChild:bg z:0];
+        
         CCLabelTTF *titulo = [CreacionElementos crearLabelConTexto:@"Instrucciones" tamano:40];
         titulo.position = ccp(size.width/2, size.height - titulo.contentSize.height);
         [self addChild:titulo z:1];
         
-        CCLabelTTF *instrucciones = [CreacionElementos crearLabelConTexto:@"Es como cualquier memorama dude que pedo?" tamano:25];
+        CCLabelTTF *instrucciones = [CCLabelTTF labelWithString:@"Para jugar simplemente selecciona un nivel, ya que lo hayas escogido selecciona una carta y trata de encontrar su par correspondiente, cuando encuentres todos los pares ¡ganas!" dimensions:CGSizeMake(400, 130) alignment:UITextAlignmentCenter fontName:@"Futura" fontSize:19];
         instrucciones.position = ccp(size.width/2, size.height/2);
         [self addChild:instrucciones z:1];
         

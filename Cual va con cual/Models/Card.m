@@ -16,7 +16,6 @@
 {
     self = [super init];
     if (self) {
-        // No es obligatorio, pero es recomendado inicializar ivars
         _name = [name copy];
         _value = [value copy];
     }

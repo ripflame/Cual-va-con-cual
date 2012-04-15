@@ -13,6 +13,9 @@
 #import "Titulo.h"
 
 @interface LevelFactory()
+- (id)initWithLevel:(NSInteger)level;
+- (void)escogerCartas:(NSUInteger)cantidad;
+- (void)crearSprites:(int)numero;
 @end
 
 @implementation LevelFactory
@@ -35,10 +38,15 @@
         _level = level;
         
         size = [CCDirector sharedDirector].winSize;
+        
+        CCSprite *bg = [CCSprite spriteWithFile:@"bg4.png"];
+        bg.position = ccp(size.width/2, size.height/2);
+        [self addChild:bg z:0];
+        
         NSString *title = [NSString stringWithFormat:@"Nivel %d", level];
         
-        CCLabelTTF *titulo = [CCLabelTTF labelWithString:title fontName:@"Marker Felt" fontSize:40];
-        titulo.position = ccp(size.width/2, size.height - titulo.contentSize.height);
+        CCLabelTTF *titulo = [CCLabelTTF labelWithString:title fontName:@"Futura" fontSize:36];
+        titulo.position = ccp(size.width/2, size.height - titulo.contentSize.height/2);
         [self addChild:titulo z:1];
         
         CCMenuItemLabel *atrasButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Atrás" tamano:32] target:self selector:@selector(atras:)];
@@ -60,28 +68,28 @@
 #pragma mark - Acciones
 
 - (void)escogerCartas:(NSUInteger)cantidad
-{    
-    /**
-     HINT:
-     Si sabes que el objeto debe ser autorelease, usa los metodos de conveniencia
-     En vez de [[[NSMutableArray alloc] init] autorelease];
-     Utiliza [NSMutableArray array];
-     **/
+{
     NSMutableArray *tmpArray = [NSMutableArray array];
+    NSMutableArray *cartasEscogidas = [NSMutableArray array];
     
     int randomNum;
     
     for (int i = 0; i < cantidad/2; i++) {
         randomNum = (arc4random() % 5)+1;
+        
+        while ([cartasEscogidas containsObject:[NSNumber numberWithInt:randomNum]]) {
+            randomNum = (arc4random() % 5)+1;
+        }
+        
+        [cartasEscogidas addObject:[NSNumber numberWithInt:randomNum]];
+        
         Card *card = [Card cardWithName:[NSString stringWithFormat:@"carta%da.png", randomNum] 
                                andValue:[NSNumber numberWithInt:randomNum]];
         [tmpArray addObject:card];
-        [tmpArray addObject:card];
+        Card *cardPair = [Card cardWithName:[NSString stringWithFormat:@"carta%d.png", randomNum] andValue:[NSNumber numberWithInt:randomNum]];
+        [tmpArray addObject:cardPair];
     }
     
-    // El metodo 'shuffled' es de instancia, en vez de
-    // cartas = [[NSArray arrayWithArray:tmpArray] shuffled];
-    // podias hacer esto:
     cartas = [tmpArray shuffled];
     [cartas retain];
 }
@@ -102,11 +110,14 @@
     if (cartasVisibles == 2) {
         cartaAnterior.normalImage = [CCSprite spriteWithFile:@"fondo.png"];
         cartaAnterior.selectedImage = [CCSprite spriteWithFile:@"fondo.png"];
+        [cartaAnterior setIsEnabled:YES];
         cartaAnteAnterior.normalImage = [CCSprite spriteWithFile:@"fondo.png"];
         cartaAnteAnterior.selectedImage = [CCSprite spriteWithFile:@"fondo.png"];
+        [cartaAnteAnterior setIsEnabled:YES];
         
         sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
         sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
+        [sender setIsEnabled:NO];
         
         cartaAnterior = sender;
         cartasVisibles = 1;
@@ -124,6 +135,7 @@
         } else {
             sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
             sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
+            [sender setIsEnabled:NO];
             cartaAnteAnterior = cartaAnterior;
             cartaAnterior = sender;
             cartasVisibles = 2;
@@ -131,6 +143,7 @@
     } else {
         sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
         sender.selectedImage = [CCSprite spriteWithFile:currentCard.name];
+        [sender setIsEnabled:NO];
         cartaAnterior = sender;
         cartasVisibles = 1;
     }

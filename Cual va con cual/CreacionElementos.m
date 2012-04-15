@@ -12,7 +12,7 @@
 
 + (CCLabelTTF *)crearLabelConTexto:(NSString *)texto tamano:(int)tamano
 {
-    CCLabelTTF *label = [CCLabelTTF labelWithString:texto fontName:@"Marker Felt" fontSize:tamano];
+    CCLabelTTF *label = [CCLabelTTF labelWithString:texto fontName:@"Futura" fontSize:tamano];
     
     return label;
 }
