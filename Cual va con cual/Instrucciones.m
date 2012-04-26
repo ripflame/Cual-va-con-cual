@@ -45,13 +45,20 @@
         titulo.position = ccp(size.width/2, size.height - titulo.contentSize.height);
         [self addChild:titulo z:1];
         
-        CCLabelTTF *instrucciones = [CCLabelTTF labelWithString:@"Para jugar simplemente selecciona un nivel, ya que lo hayas escogido selecciona una carta y trata de encontrar su par correspondiente, cuando encuentres todos los pares ¡ganas!" dimensions:CGSizeMake(400, 130) alignment:UITextAlignmentCenter fontName:@"Futura" fontSize:19];
+        CCLabelTTF *instrucciones = [CCLabelTTF labelWithString:@"Para ganar tienes que encontrar todos los pares de cartas por ejemplo:" dimensions:CGSizeMake(400, 130) alignment:UITextAlignmentCenter fontName:@"Futura" fontSize:19];
         instrucciones.position = ccp(size.width/2, size.height/2);
         [self addChild:instrucciones z:1];
         
+        CCSprite *cartaUno = [CCSprite spriteWithFile:@"carta1.png"];
+        cartaUno.position = ccp(size.width/2 - 90, size.height/2 - 50);
+        [self addChild:cartaUno z:1];
+        CCSprite *cartaUnoA = [CCSprite spriteWithFile:@"carta1a.png"];
+        cartaUnoA.position = ccp(size.width/2 + 90, size.height/2 - 50);
+        [self addChild:cartaUnoA z:1];
+        
         CCMenuItemLabel *atrasButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Atrás" tamano:32] target:self selector:@selector(atras:)];
         CCMenu *menu = [CCMenu menuWithItems:atrasButton, nil];
-        menu.position = ccp(atrasButton.contentSize.width, atrasButton.contentSize.height);
+        menu.position = ccp(atrasButton.contentSize.width, atrasButton.contentSize.height/2);
         [self addChild:menu z:1];
     }
     

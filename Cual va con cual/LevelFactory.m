@@ -47,7 +47,7 @@
     if (self) {
         size = [CCDirector sharedDirector].winSize;
         currentLevel = level;
-        CCSprite *bg = [CCSprite spriteWithFile:@"bg4.png"];
+        CCSprite *bg = [CCSprite spriteWithFile:@"bg2.png"];
         bg.position = ccp(size.width/2, size.height/2);
         [self addChild:bg z:0];
         
