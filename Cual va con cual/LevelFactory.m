@@ -10,6 +10,7 @@
 #import "CreacionElementos.h"
 #import "Card.h"
 #import "NSArray+Helpers.h"
+#import "GameOver.h"
 
 @interface LevelFactory()
 - (id)initWithLevel:(kGameLevel)level;
@@ -32,7 +33,7 @@
 
 - (NSInteger)numOfCardsForLevel:(kGameLevel)level
 {
-    return 2 + (level + 1)*2;
+    return 2 + (level + 2)*2;
 }
 
 - (NSInteger)numOfCardsForCurrentLevel
@@ -50,7 +51,7 @@
         bg.position = ccp(size.width/2, size.height/2);
         [self addChild:bg z:0];
         
-        NSString *title = [NSString stringWithFormat:@"Nivel %d", level];
+        NSString *title = [NSString stringWithFormat:@"Nivel %d", level+1];
         
         CCLabelTTF *titulo = [CCLabelTTF labelWithString:title fontName:@"Futura" fontSize:36];
         titulo.position = ccp(size.width/2, size.height - titulo.contentSize.height/2);
@@ -103,10 +104,10 @@
     int randomNum;
     
     for (int i = 0; i < cantidad/2; i++) {
-        randomNum = (arc4random() % 5)+1;
+        randomNum = (arc4random() % 15)+1;
         
         while ([cartasEscogidas containsObject:[NSNumber numberWithInt:randomNum]]) {
-            randomNum = (arc4random() % 5)+1;
+            randomNum = (arc4random() % 15)+1;
         }
         
         [cartasEscogidas addObject:[NSNumber numberWithInt:randomNum]];
@@ -157,7 +158,8 @@
             cartasVisibles = 0;
             parejasEncontradas++;
             if (parejasEncontradas >= cartas.count/2) {
-                [self performSelector:@selector(mostrarBotonReset:)];
+                [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:0.5],
+                                 [CCCallFunc actionWithTarget:self selector:@selector(mostrarBotonReset:)], nil]];
             }
         } else {
             sender.normalImage = [CCSprite spriteWithFile:currentCard.name];
@@ -176,9 +178,16 @@
     }
 }
 
+- (void)mostrarGameOver
+{
+    CCScene *scene = [GameOver scene];
+    [[CCDirector sharedDirector] pushScene:scene];
+}
+
 - (void)mostrarBotonReset:(id)sender
 {
-    CCMenuItemLabel *otroJuegoButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Otro Juego" tamano:32] target:self selector:@selector(reset:)];
+    [self mostrarGameOver];
+    CCMenuItemLabel *otroJuegoButton = [CCMenuItemLabel itemWithLabel:[CreacionElementos crearLabelConTexto:@"Jugar otra vez" tamano:32] target:self selector:@selector(reset:)];
     CCMenu *menu = [CCMenu menuWithItems:otroJuegoButton, nil];
     menu.position = ccp(size.width - otroJuegoButton.contentSize.width/2, otroJuegoButton.contentSize.height/2);
     [self addChild:menu z:1 tag:100];

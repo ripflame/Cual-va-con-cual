@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface GameOver : CCLayer {
-    
-}
+@interface GameOver : CCLayer
+
++ (CCScene *)scene;
 
 @end
