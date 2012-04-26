@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2D540D1548BFAD008F2DB6 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D540C1548BFAD008F2DB6 /* GameOver.m */; };
 		3DC495F9152B9CF600101CA0 /* carta1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495EE152B9CF600101CA0 /* carta1.png */; };
 		3DC495FA152B9CF600101CA0 /* carta1a.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495EF152B9CF600101CA0 /* carta1a.png */; };
 		3DC495FB152B9CF600101CA0 /* carta2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC495F0152B9CF600101CA0 /* carta2.png */; };
@@ -146,6 +147,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2D540B1548BFAD008F2DB6 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
+		3D2D540C1548BFAD008F2DB6 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
 		3DC495EE152B9CF600101CA0 /* carta1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta1.png; sourceTree = "<group>"; };
 		3DC495EF152B9CF600101CA0 /* carta1a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta1a.png; sourceTree = "<group>"; };
 		3DC495F0152B9CF600101CA0 /* carta2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carta2.png; sourceTree = "<group>"; };
@@ -866,6 +869,8 @@
 				3DC5DD91152A7B050093B884 /* Dificultad.m */,
 				3DF3A2CB152A8D94004A7A6C /* Instrucciones.h */,
 				3DF3A2CC152A8D94004A7A6C /* Instrucciones.m */,
+				3D2D540B1548BFAD008F2DB6 /* GameOver.h */,
+				3D2D540C1548BFAD008F2DB6 /* GameOver.m */,
 				3DF3A2DA152A9121004A7A6C /* Niveles */,
 			);
 			name = Titulos;
@@ -1077,6 +1082,7 @@
 				3DF305A3152CD1D700F3B92B /* NSArray+Helpers.m in Sources */,
 				4BC2D48E15366F0700CD1B15 /* Card.m in Sources */,
 				4B28A6D715390CE2000C3EBA /* LevelFactory.m in Sources */,
+				3D2D540D1548BFAD008F2DB6 /* GameOver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
