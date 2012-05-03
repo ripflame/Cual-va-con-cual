@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Prueba Sobrecargas' target in the 'Prueba Sobrecargas' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D280ABA14FD642200018AB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D280AB914FD642200018AB3 /* UIKit.framework */; };
+		3D280ABC14FD642200018AB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D280ABB14FD642200018AB3 /* Foundation.framework */; };
+		3D280ABE14FD642200018AB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D280ABD14FD642200018AB3 /* CoreGraphics.framework */; };
+		3D280AC414FD642200018AB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D280AC214FD642200018AB3 /* InfoPlist.strings */; };
+		3D280AC614FD642200018AB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D280AC514FD642200018AB3 /* main.m */; };
+		3D280ACA14FD642200018AB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D280AC914FD642200018AB3 /* AppDelegate.m */; };
+		3D280ACD14FD642200018AB3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D280ACC14FD642200018AB3 /* MasterViewController.m */; };
+		3D280AD014FD642200018AB3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D280ACF14FD642200018AB3 /* DetailViewController.m */; };
+		3D280AD314FD642200018AB3 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D280AD114FD642200018AB3 /* MasterViewController.xib */; };
+		3D280AD614FD642200018AB3 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D280AD414FD642200018AB3 /* DetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D280AB514FD642200018AB3 /* pruebaColorTabla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pruebaColorTabla.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D280AB914FD642200018AB3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3D280ABB14FD642200018AB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D280ABD14FD642200018AB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D280AC114FD642200018AB3 /* pruebaColorTabla-Info.plist */ = {isa = PBXFileReference; path = "pruebaColorTabla-Info.plist"; sourceTree = "<group>"; };
+		3D280AC314FD642200018AB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D280AC514FD642200018AB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D280AC714FD642200018AB3 /* pruebaColorTabla-Prefix.pch */ = {isa = PBXFileReference; path = "pruebaColorTabla-Prefix.pch"; sourceTree = "<group>"; };
+		3D280AC814FD642200018AB3 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		3D280AC914FD642200018AB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3D280ACB14FD642200018AB3 /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		3D280ACC14FD642200018AB3 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		3D280ACE14FD642200018AB3 /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		3D280ACF14FD642200018AB3 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3D280AD214FD642200018AB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		3D280AD514FD642200018AB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D280AB214FD642200018AB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D280ABA14FD642200018AB3 /* UIKit.framework in Frameworks */,
+				3D280ABC14FD642200018AB3 /* Foundation.framework in Frameworks */,
+				3D280ABE14FD642200018AB3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D280AAA14FD642100018AB3 = {
+			isa = PBXGroup;
+			children = (
+				3D280ABF14FD642200018AB3 /* pruebaColorTabla */,
+				3D280AB814FD642200018AB3 /* Frameworks */,
+				3D280AB614FD642200018AB3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D280AB614FD642200018AB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D280AB514FD642200018AB3 /* pruebaColorTabla.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D280AB814FD642200018AB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D280AB914FD642200018AB3 /* UIKit.framework */,
+				3D280ABB14FD642200018AB3 /* Foundation.framework */,
+				3D280ABD14FD642200018AB3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D280ABF14FD642200018AB3 /* pruebaColorTabla */ = {
+			isa = PBXGroup;
+			children = (
+				3D280AC814FD642200018AB3 /* AppDelegate.h */,
+				3D280AC914FD642200018AB3 /* AppDelegate.m */,
+				3D280ACB14FD642200018AB3 /* MasterViewController.h */,
+				3D280ACC14FD642200018AB3 /* MasterViewController.m */,
+				3D280ACE14FD642200018AB3 /* DetailViewController.h */,
+				3D280ACF14FD642200018AB3 /* DetailViewController.m */,
+				3D280AD114FD642200018AB3 /* MasterViewController.xib */,
+				3D280AD414FD642200018AB3 /* DetailViewController.xib */,
+				3D280AC014FD642200018AB3 /* Supporting Files */,
+			);
+			path = pruebaColorTabla;
+			sourceTree = "<group>";
+		};
+		3D280AC014FD642200018AB3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D280AC114FD642200018AB3 /* pruebaColorTabla-Info.plist */,
+				3D280AC214FD642200018AB3 /* InfoPlist.strings */,
+				3D280AC514FD642200018AB3 /* main.m */,
+				3D280AC714FD642200018AB3 /* pruebaColorTabla-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D280AB414FD642200018AB3 /* pruebaColorTabla */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D280AD914FD642200018AB3 /* Build configuration list for PBXNativeTarget "pruebaColorTabla" */;
+			buildPhases = (
+				3D280AB114FD642200018AB3 /* Sources */,
+				3D280AB214FD642200018AB3 /* Frameworks */,
+				3D280AB314FD642200018AB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pruebaColorTabla;
+			productName = pruebaColorTabla;
+			productReference = 3D280AB514FD642200018AB3 /* pruebaColorTabla.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D280AAC14FD642100018AB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 3D280AAF14FD642100018AB3 /* Build configuration list for PBXProject "pruebaColorTabla" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3D280AAA14FD642100018AB3;
+			productRefGroup = 3D280AB614FD642200018AB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D280AB414FD642200018AB3 /* pruebaColorTabla */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D280AB314FD642200018AB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D280AC414FD642200018AB3 /* InfoPlist.strings in Resources */,
+				3D280AD314FD642200018AB3 /* MasterViewController.xib in Resources */,
+				3D280AD614FD642200018AB3 /* DetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D280AB114FD642200018AB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D280AC614FD642200018AB3 /* main.m in Sources */,
+				3D280ACA14FD642200018AB3 /* AppDelegate.m in Sources */,
+				3D280ACD14FD642200018AB3 /* MasterViewController.m in Sources */,
+				3D280AD014FD642200018AB3 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D280AC214FD642200018AB3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D280AC314FD642200018AB3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D280AD114FD642200018AB3 /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D280AD214FD642200018AB3 /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		3D280AD414FD642200018AB3 /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D280AD514FD642200018AB3 /* en */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D280AD714FD642200018AB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3D280AD814FD642200018AB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D280ADA14FD642200018AB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pruebaColorTabla/pruebaColorTabla-Prefix.pch";
+				INFOPLIST_FILE = "pruebaColorTabla/pruebaColorTabla-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3D280ADB14FD642200018AB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pruebaColorTabla/pruebaColorTabla-Prefix.pch";
+				INFOPLIST_FILE = "pruebaColorTabla/pruebaColorTabla-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D280AAF14FD642100018AB3 /* Build configuration list for PBXProject "pruebaColorTabla" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D280AD714FD642200018AB3 /* Debug */,
+				3D280AD814FD642200018AB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D280AD914FD642200018AB3 /* Build configuration list for PBXNativeTarget "pruebaColorTabla" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D280ADA14FD642200018AB3 /* Debug */,
+				3D280ADB14FD642200018AB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D280AAC14FD642100018AB3 /* Project object */;
+}

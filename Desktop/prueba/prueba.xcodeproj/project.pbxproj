@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DA8C4B214ED4178006A1E93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA8C4B114ED4178006A1E93 /* UIKit.framework */; };
+		3DA8C4B414ED4178006A1E93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA8C4B314ED4178006A1E93 /* Foundation.framework */; };
+		3DA8C4B614ED4178006A1E93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA8C4B514ED4178006A1E93 /* CoreGraphics.framework */; };
+		3DA8C4BC14ED4178006A1E93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DA8C4BA14ED4178006A1E93 /* InfoPlist.strings */; };
+		3DA8C4BE14ED4178006A1E93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8C4BD14ED4178006A1E93 /* main.m */; };
+		3DA8C4C214ED4178006A1E93 /* PropinasAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8C4C114ED4178006A1E93 /* PropinasAppDelegate.m */; };
+		3DA8C4C514ED4178006A1E93 /* PropinasMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8C4C414ED4178006A1E93 /* PropinasMainViewController.m */; };
+		3DA8C4C814ED4178006A1E93 /* PropinasFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8C4C714ED4178006A1E93 /* PropinasFlipsideViewController.m */; };
+		3DA8C4CB14ED4178006A1E93 /* PropinasMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA8C4C914ED4178006A1E93 /* PropinasMainViewController.xib */; };
+		3DA8C4CE14ED4178006A1E93 /* PropinasFlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA8C4CC14ED4178006A1E93 /* PropinasFlipsideViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3DA8C4AD14ED4178006A1E93 /* prueba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prueba.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DA8C4B114ED4178006A1E93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3DA8C4B314ED4178006A1E93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3DA8C4B514ED4178006A1E93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3DA8C4B914ED4178006A1E93 /* prueba-Info.plist */ = {isa = PBXFileReference; path = "prueba-Info.plist"; sourceTree = "<group>"; };
+		3DA8C4BB14ED4178006A1E93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DA8C4BD14ED4178006A1E93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DA8C4BF14ED4178006A1E93 /* prueba-Prefix.pch */ = {isa = PBXFileReference; path = "prueba-Prefix.pch"; sourceTree = "<group>"; };
+		3DA8C4C014ED4178006A1E93 /* PropinasAppDelegate.h */ = {isa = PBXFileReference; path = PropinasAppDelegate.h; sourceTree = "<group>"; };
+		3DA8C4C114ED4178006A1E93 /* PropinasAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropinasAppDelegate.m; sourceTree = "<group>"; };
+		3DA8C4C314ED4178006A1E93 /* PropinasMainViewController.h */ = {isa = PBXFileReference; path = PropinasMainViewController.h; sourceTree = "<group>"; };
+		3DA8C4C414ED4178006A1E93 /* PropinasMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropinasMainViewController.m; sourceTree = "<group>"; };
+		3DA8C4C614ED4178006A1E93 /* PropinasFlipsideViewController.h */ = {isa = PBXFileReference; path = PropinasFlipsideViewController.h; sourceTree = "<group>"; };
+		3DA8C4C714ED4178006A1E93 /* PropinasFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropinasFlipsideViewController.m; sourceTree = "<group>"; };
+		3DA8C4CA14ED4178006A1E93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PropinasMainViewController.xib; sourceTree = "<group>"; };
+		3DA8C4CD14ED4178006A1E93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PropinasFlipsideViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DA8C4AA14ED4178006A1E93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DA8C4B214ED4178006A1E93 /* UIKit.framework in Frameworks */,
+				3DA8C4B414ED4178006A1E93 /* Foundation.framework in Frameworks */,
+				3DA8C4B614ED4178006A1E93 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DA8C4A214ED4177006A1E93 = {
+			isa = PBXGroup;
+			children = (
+				3DA8C4B714ED4178006A1E93 /* prueba */,
+				3DA8C4B014ED4178006A1E93 /* Frameworks */,
+				3DA8C4AE14ED4178006A1E93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DA8C4AE14ED4178006A1E93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DA8C4AD14ED4178006A1E93 /* prueba.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DA8C4B014ED4178006A1E93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DA8C4B114ED4178006A1E93 /* UIKit.framework */,
+				3DA8C4B314ED4178006A1E93 /* Foundation.framework */,
+				3DA8C4B514ED4178006A1E93 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DA8C4B714ED4178006A1E93 /* prueba */ = {
+			isa = PBXGroup;
+			children = (
+				3DA8C4C014ED4178006A1E93 /* PropinasAppDelegate.h */,
+				3DA8C4C114ED4178006A1E93 /* PropinasAppDelegate.m */,
+				3DA8C4C314ED4178006A1E93 /* PropinasMainViewController.h */,
+				3DA8C4C414ED4178006A1E93 /* PropinasMainViewController.m */,
+				3DA8C4C614ED4178006A1E93 /* PropinasFlipsideViewController.h */,
+				3DA8C4C714ED4178006A1E93 /* PropinasFlipsideViewController.m */,
+				3DA8C4C914ED4178006A1E93 /* PropinasMainViewController.xib */,
+				3DA8C4CC14ED4178006A1E93 /* PropinasFlipsideViewController.xib */,
+				3DA8C4B814ED4178006A1E93 /* Supporting Files */,
+			);
+			path = prueba;
+			sourceTree = "<group>";
+		};
+		3DA8C4B814ED4178006A1E93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DA8C4B914ED4178006A1E93 /* prueba-Info.plist */,
+				3DA8C4BA14ED4178006A1E93 /* InfoPlist.strings */,
+				3DA8C4BD14ED4178006A1E93 /* main.m */,
+				3DA8C4BF14ED4178006A1E93 /* prueba-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DA8C4AC14ED4178006A1E93 /* prueba */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DA8C4D114ED4178006A1E93 /* Build configuration list for PBXNativeTarget "prueba" */;
+			buildPhases = (
+				3DA8C4A914ED4178006A1E93 /* Sources */,
+				3DA8C4AA14ED4178006A1E93 /* Frameworks */,
+				3DA8C4AB14ED4178006A1E93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = prueba;
+			productName = prueba;
+			productReference = 3DA8C4AD14ED4178006A1E93 /* prueba.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DA8C4A414ED4178006A1E93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 3DA8C4A714ED4178006A1E93 /* Build configuration list for PBXProject "prueba" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3DA8C4A214ED4177006A1E93;
+			productRefGroup = 3DA8C4AE14ED4178006A1E93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DA8C4AC14ED4178006A1E93 /* prueba */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DA8C4AB14ED4178006A1E93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DA8C4BC14ED4178006A1E93 /* InfoPlist.strings in Resources */,
+				3DA8C4CB14ED4178006A1E93 /* PropinasMainViewController.xib in Resources */,
+				3DA8C4CE14ED4178006A1E93 /* PropinasFlipsideViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DA8C4A914ED4178006A1E93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DA8C4BE14ED4178006A1E93 /* main.m in Sources */,
+				3DA8C4C214ED4178006A1E93 /* PropinasAppDelegate.m in Sources */,
+				3DA8C4C514ED4178006A1E93 /* PropinasMainViewController.m in Sources */,
+				3DA8C4C814ED4178006A1E93 /* PropinasFlipsideViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3DA8C4BA14ED4178006A1E93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DA8C4BB14ED4178006A1E93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3DA8C4C914ED4178006A1E93 /* PropinasMainViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DA8C4CA14ED4178006A1E93 /* en */,
+			);
+			name = PropinasMainViewController.xib;
+			sourceTree = "<group>";
+		};
+		3DA8C4CC14ED4178006A1E93 /* PropinasFlipsideViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DA8C4CD14ED4178006A1E93 /* en */,
+			);
+			name = PropinasFlipsideViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DA8C4CF14ED4178006A1E93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3DA8C4D014ED4178006A1E93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DA8C4D214ED4178006A1E93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "prueba/prueba-Prefix.pch";
+				INFOPLIST_FILE = "prueba/prueba-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3DA8C4D314ED4178006A1E93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "prueba/prueba-Prefix.pch";
+				INFOPLIST_FILE = "prueba/prueba-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DA8C4A714ED4178006A1E93 /* Build configuration list for PBXProject "prueba" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DA8C4CF14ED4178006A1E93 /* Debug */,
+				3DA8C4D014ED4178006A1E93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DA8C4D114ED4178006A1E93 /* Build configuration list for PBXNativeTarget "prueba" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DA8C4D214ED4178006A1E93 /* Debug */,
+				3DA8C4D314ED4178006A1E93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DA8C4A414ED4178006A1E93 /* Project object */;
+}

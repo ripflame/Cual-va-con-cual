@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D22B34D14E6FD88003FB3DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D22B34C14E6FD88003FB3DA /* UIKit.framework */; };
+		3D22B34F14E6FD88003FB3DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D22B34E14E6FD88003FB3DA /* Foundation.framework */; };
+		3D22B35114E6FD88003FB3DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D22B35014E6FD88003FB3DA /* CoreGraphics.framework */; };
+		3D22B35714E6FD88003FB3DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D22B35514E6FD88003FB3DA /* InfoPlist.strings */; };
+		3D22B35914E6FD88003FB3DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D22B35814E6FD88003FB3DA /* main.m */; };
+		3D22B35D14E6FD88003FB3DA /* PropinasAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D22B35C14E6FD88003FB3DA /* PropinasAppDelegate.m */; };
+		3D22B36014E6FD88003FB3DA /* PropinasMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D22B35F14E6FD88003FB3DA /* PropinasMainViewController.m */; };
+		3D22B36314E6FD88003FB3DA /* PropinasFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D22B36214E6FD88003FB3DA /* PropinasFlipsideViewController.m */; };
+		3D22B36614E6FD88003FB3DA /* PropinasMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D22B36414E6FD88003FB3DA /* PropinasMainViewController.xib */; };
+		3D22B36914E6FD88003FB3DA /* PropinasFlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D22B36714E6FD88003FB3DA /* PropinasFlipsideViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D22B34814E6FD88003FB3DA /* Propinas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Propinas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D22B34C14E6FD88003FB3DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3D22B34E14E6FD88003FB3DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D22B35014E6FD88003FB3DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D22B35414E6FD88003FB3DA /* Propinas-Info.plist */ = {isa = PBXFileReference; path = "Propinas-Info.plist"; sourceTree = "<group>"; };
+		3D22B35614E6FD88003FB3DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D22B35814E6FD88003FB3DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D22B35A14E6FD88003FB3DA /* Propinas-Prefix.pch */ = {isa = PBXFileReference; path = "Propinas-Prefix.pch"; sourceTree = "<group>"; };
+		3D22B35B14E6FD88003FB3DA /* PropinasAppDelegate.h */ = {isa = PBXFileReference; path = PropinasAppDelegate.h; sourceTree = "<group>"; };
+		3D22B35C14E6FD88003FB3DA /* PropinasAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropinasAppDelegate.m; sourceTree = "<group>"; };
+		3D22B35E14E6FD88003FB3DA /* PropinasMainViewController.h */ = {isa = PBXFileReference; path = PropinasMainViewController.h; sourceTree = "<group>"; };
+		3D22B35F14E6FD88003FB3DA /* PropinasMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropinasMainViewController.m; sourceTree = "<group>"; };
+		3D22B36114E6FD88003FB3DA /* PropinasFlipsideViewController.h */ = {isa = PBXFileReference; path = PropinasFlipsideViewController.h; sourceTree = "<group>"; };
+		3D22B36214E6FD88003FB3DA /* PropinasFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropinasFlipsideViewController.m; sourceTree = "<group>"; };
+		3D22B36514E6FD88003FB3DA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PropinasMainViewController.xib; sourceTree = "<group>"; };
+		3D22B36814E6FD88003FB3DA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PropinasFlipsideViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D22B34514E6FD88003FB3DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D22B34D14E6FD88003FB3DA /* UIKit.framework in Frameworks */,
+				3D22B34F14E6FD88003FB3DA /* Foundation.framework in Frameworks */,
+				3D22B35114E6FD88003FB3DA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D22B33D14E6FD87003FB3DA = {
+			isa = PBXGroup;
+			children = (
+				3D22B35214E6FD88003FB3DA /* Propinas */,
+				3D22B34B14E6FD88003FB3DA /* Frameworks */,
+				3D22B34914E6FD88003FB3DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D22B34914E6FD88003FB3DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D22B34814E6FD88003FB3DA /* Propinas.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D22B34B14E6FD88003FB3DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D22B34C14E6FD88003FB3DA /* UIKit.framework */,
+				3D22B34E14E6FD88003FB3DA /* Foundation.framework */,
+				3D22B35014E6FD88003FB3DA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D22B35214E6FD88003FB3DA /* Propinas */ = {
+			isa = PBXGroup;
+			children = (
+				3D22B35B14E6FD88003FB3DA /* PropinasAppDelegate.h */,
+				3D22B35C14E6FD88003FB3DA /* PropinasAppDelegate.m */,
+				3D22B35E14E6FD88003FB3DA /* PropinasMainViewController.h */,
+				3D22B35F14E6FD88003FB3DA /* PropinasMainViewController.m */,
+				3D22B36114E6FD88003FB3DA /* PropinasFlipsideViewController.h */,
+				3D22B36214E6FD88003FB3DA /* PropinasFlipsideViewController.m */,
+				3D22B36414E6FD88003FB3DA /* PropinasMainViewController.xib */,
+				3D22B36714E6FD88003FB3DA /* PropinasFlipsideViewController.xib */,
+				3D22B35314E6FD88003FB3DA /* Supporting Files */,
+			);
+			path = Propinas;
+			sourceTree = "<group>";
+		};
+		3D22B35314E6FD88003FB3DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D22B35414E6FD88003FB3DA /* Propinas-Info.plist */,
+				3D22B35514E6FD88003FB3DA /* InfoPlist.strings */,
+				3D22B35814E6FD88003FB3DA /* main.m */,
+				3D22B35A14E6FD88003FB3DA /* Propinas-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D22B34714E6FD88003FB3DA /* Propinas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D22B36C14E6FD88003FB3DA /* Build configuration list for PBXNativeTarget "Propinas" */;
+			buildPhases = (
+				3D22B34414E6FD88003FB3DA /* Sources */,
+				3D22B34514E6FD88003FB3DA /* Frameworks */,
+				3D22B34614E6FD88003FB3DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Propinas;
+			productName = Propinas;
+			productReference = 3D22B34814E6FD88003FB3DA /* Propinas.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D22B33F14E6FD87003FB3DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 3D22B34214E6FD87003FB3DA /* Build configuration list for PBXProject "Propinas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3D22B33D14E6FD87003FB3DA;
+			productRefGroup = 3D22B34914E6FD88003FB3DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D22B34714E6FD88003FB3DA /* Propinas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D22B34614E6FD88003FB3DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D22B35714E6FD88003FB3DA /* InfoPlist.strings in Resources */,
+				3D22B36614E6FD88003FB3DA /* PropinasMainViewController.xib in Resources */,
+				3D22B36914E6FD88003FB3DA /* PropinasFlipsideViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D22B34414E6FD88003FB3DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D22B35914E6FD88003FB3DA /* main.m in Sources */,
+				3D22B35D14E6FD88003FB3DA /* PropinasAppDelegate.m in Sources */,
+				3D22B36014E6FD88003FB3DA /* PropinasMainViewController.m in Sources */,
+				3D22B36314E6FD88003FB3DA /* PropinasFlipsideViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D22B35514E6FD88003FB3DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D22B35614E6FD88003FB3DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D22B36414E6FD88003FB3DA /* PropinasMainViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D22B36514E6FD88003FB3DA /* en */,
+			);
+			name = PropinasMainViewController.xib;
+			sourceTree = "<group>";
+		};
+		3D22B36714E6FD88003FB3DA /* PropinasFlipsideViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D22B36814E6FD88003FB3DA /* en */,
+			);
+			name = PropinasFlipsideViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D22B36A14E6FD88003FB3DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3D22B36B14E6FD88003FB3DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D22B36D14E6FD88003FB3DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Propinas/Propinas-Prefix.pch";
+				INFOPLIST_FILE = "Propinas/Propinas-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3D22B36E14E6FD88003FB3DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Propinas/Propinas-Prefix.pch";
+				INFOPLIST_FILE = "Propinas/Propinas-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D22B34214E6FD87003FB3DA /* Build configuration list for PBXProject "Propinas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D22B36A14E6FD88003FB3DA /* Debug */,
+				3D22B36B14E6FD88003FB3DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D22B36C14E6FD88003FB3DA /* Build configuration list for PBXNativeTarget "Propinas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D22B36D14E6FD88003FB3DA /* Debug */,
+				3D22B36E14E6FD88003FB3DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D22B33F14E6FD87003FB3DA /* Project object */;
+}
